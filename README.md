@@ -1,5 +1,5 @@
 # KompanionAD
-Peoject Application Development UTM
+Project Application Development UTM
 (SCSJ3104-01)
 
 -Finalize project
