@@ -1,0 +1,19 @@
+{
+  "name": "prototype_quiz",
+  "version": "1.0.0",
+  "description": "prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "tachyons": "^4.12.0"
+  }
+}
