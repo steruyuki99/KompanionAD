@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import jdbc.JDBCUtility;
+import Question.Answer;
 /**
  *
  * @author Asus
@@ -125,13 +126,7 @@ public class SummativeServlet extends HttpServlet {
         }
      
      try(PrintWriter out = response.getWriter()){
-        out.println("<!DOCTYPE html>"); 
-       out.println("<html>"); 
-       out.println("<head>"); 
-       out.println("<title>Ans</title>"); 
-       out.println("</head>"); 
-       out.println("<body>"); 
-       
+      
        ArrayList<Answer> ans = new ArrayList<Answer>();
        
        ans.add(new Answer(c1, j1));
@@ -146,9 +141,6 @@ public class SummativeServlet extends HttpServlet {
          request.getRequestDispatcher("AnsSummative.jsp"); 
         rd.forward(request, response); 
         
-         out.println("</body>"); 
-         out.println("</html>"); 
-       
      }
        response.sendRedirect ("AnsSummative.jsp");
     }
