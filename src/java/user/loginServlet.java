@@ -75,12 +75,11 @@ public class loginServlet extends HttpServlet {
                 email = rs.getString("email");
                 if (passw.equals(pass) && usern.equals(user)) {
 
-                    HttpSession session = request.getSession();
+                    HttpSession session = request.getSession(true);
                     session.setAttribute("username", usern);
-                    session.setAttribute("password", passw);
-                    session.setAttribute("email", email);
-                    response.sendRedirect("material/1.1.1.jsp");
-                } 
+                    RequestDispatcher rd = request.getRequestDispatcher("material/1.1.1.jsp");
+                    rd.forward(request, response);
+                }
             }
             // PrintWriter out = response.getWriter();
             //out.println("Sorry unable to log in ");
