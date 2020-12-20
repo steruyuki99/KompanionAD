@@ -47,24 +47,46 @@ header{
     }
 }
 
-
 .main_visual{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('https://images.pexels.com/photos/1342460/pexels-photo-1342460.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500') top center/cover no-repeat;
-    
+    //background: url('https://cutewallpaper.org/21/programing-wallpaper/4K-Programming-Wallpapers-Top-Free-4K-Programming-.jpg') top center/cover no-repeat;
+    //background-color: rgb(248,248,248)  ;
+    background-image: url('src/img/3040791.jpg');
+
+    a{
+        text-decoration: none;
+        color: rgb(30,30,30);
+    }
 
 
     h2{
-        margin: 0;
-        font-size: 30px;
+        margin: 0 0 40px 0;
+        font-size: 40px;
         font-weight: normal;
-        color: #faf3f3;
-        position: relative;
-        z-index: 2;
+        text-align: center;
+        color: rgb(30,30,30);
+    }
 
+    a.button{
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+        margin-bottom: 7px;
+        padding: 15px 30px;
+        text-align: center;
+        border: 1px solid rgb(30,30,30);
+    
+    }
+
+    a.button:hover {
+        border: 1px solid white;
+        color:  rgb(248,248,248)  ;
+        background-color: dodgerblue;
     }
 }
+
+
 
