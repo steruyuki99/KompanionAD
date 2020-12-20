@@ -5,7 +5,11 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%--<%@page import="javax.servlet.http.HttpSession"%>
 
+<%HttpSession session = request.getSession(); %>
+<%String username=(String)session.getAttribute("username")%>
+--%>
 <html>
 
 <head>
@@ -32,9 +36,9 @@
   <img src="../src/img/cd2.png">
   <div class="header-right">
     <a href="../learning-material.html">View Material</a>
-    <a href="../SummativeQuestionHome.html">Summative</a>
+    <a href="../SummativeQuestion.jsp">Summative</a>
     <a href="../">Formative</a>
-    <a href="../View-Performance.html">View Performance</a>
+    <a href="../View-Performance.jsp">View Performance</a>
     <a href="../">Manage Profile</a>
     <a class="active" href="../loginpage.html">Login</a>
   </div>
@@ -138,6 +142,11 @@
     <div id="content-wrapper">
       <div id="content">
         <h1>Strategi Penyelesaian Masalah</h1>
+        <h1><%= session.getAttribute("username") %></h1>
+        <table>
+        <td>Username: </td>
+        <td><%= session.getAttribute("username") %></td>
+        </table>
         <p>Masalah ialah keraguan, situasi yang tidak diingini, cabaran dan peluang
           yang dihadapi dalam kehidupan seseorang. Kemahiran membuat
           keputusan amat diperlukan untuk melahirkan generasi yang berkebolehan

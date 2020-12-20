@@ -12,6 +12,10 @@
         <servlet-name>userRegisterServlet</servlet-name>
         <servlet-class>user.userRegisterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SummativeServlet</servlet-name>
+        <servlet-class>Question.SummativeServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/loginServlet</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>userRegisterServlet</servlet-name>
         <url-pattern>/userRegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SummativeServlet</servlet-name>
+        <url-pattern>/SummativeServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
