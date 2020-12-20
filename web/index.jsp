@@ -23,11 +23,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <title>CodingSchool</title>
 </head>
-<%
-         if(session.getAttribute("username")==null){
-             response.sendRedirect("loginpage.jsp");
-         }
-        %>
+
 <body>
   
 
@@ -37,7 +33,7 @@
         <div class="slide-bottom show">
             <h2>Home</h2>
             <a href="learning-material.html" class="button">View Material</a>
-            <a href="SummativeQuestionHome.html" class="button">Summative</a>
+            <a href="SummativeQuestion.jsp" class="button">Summative</a>
             <a href="View-Performance.jsp" class="button">View Performance</a>
             <a href="" class="button">Manage Profile</a>
 
