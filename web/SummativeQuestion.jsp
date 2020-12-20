@@ -20,7 +20,11 @@
     
         <title>CodingSchool</title>
     </head>
-    
+    <%
+         if(session.getAttribute("username")==null){
+             response.sendRedirect("loginpage.jsp");
+         }
+        %>
     <body>
         <div class="header">
     
@@ -46,7 +50,7 @@
             <div class="sidebar__item">
 
                 <h5 class="active">Questions</h5>
-                <div class="box" style="margin-left: 40px;">
+                <div class="box" >
                     <div class="box_cont">
                         <div class="qNum">
                             <div class="qNumD"><a href="#q1"> 1 </a> </div>
@@ -183,7 +187,7 @@
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan3" value="C">>
+                                    <input type="radio" class="radio" name="jawapan3" value="C">
                                     c) II, III dan IV
                                 </label>
                             </li>
