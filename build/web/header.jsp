@@ -31,7 +31,7 @@
                     <a href="../">Formative</a>
                     <a href="../View-Performance.html">View Performance</a>
                     <a href="../">Manage Profile</a>
-                    <a class="active" href="logoutServlet">Logout</a>
+                    <a class="active" href="<%=request.getContextPath()%>/logoutServlet">Logout</a>
                 </div>
             </div>
 
