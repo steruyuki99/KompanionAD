@@ -26,23 +26,7 @@
          }
         %>
     <body>
-        <div class="header">
-    
-            <button id="gotopbtn" onclick="goTop()">
-                <i class="material-icons">arrow_upward</i>
-            </button>
-    
-            <img src="src/img/cd2.png">
-            <div class="header-right">
-                <a href="learning-material.html">View Material</a>
-                <a href="SummativeQuestionHome.html">Summative</a>
-                <a href="">Formative</a>
-                <a href="View-Performance.html">View Performance</a>
-                <a href="">Manage Profile</a>
-                <a class="active" href="loginpage.html">Login</a>
-            </div>
-        </div>
-    
+       
     <!--Nav Body-->
 
     <div class="container">

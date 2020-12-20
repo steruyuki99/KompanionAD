@@ -21,12 +21,11 @@
         <title>CodingSchool Material</title>
         <script type="text/javascript" src="src/js/script.js"></script>
 
-        <c:set var="un" value="${username}"/>
-        <c:choose>
-            <c:when test="${!un.equals(null)}">
+
+        <%if(session.getAttribute("username") !=null) {%>
 
             <div class="header">
-                <img src="src/img/cd2.png">
+                <a href="index.jsp"><img src="src/img/cd2.png" ></a>
                 <div class="header-right">
                     <a href="../learning-material.html">View Material</a>
                     <a href="../SummativeQuestionHome.html">Summative</a>
@@ -36,19 +35,17 @@
                     <a class="active" href="<%=request.getContextPath()%>/logoutServlet">Logout</a>
                 </div>
             </div>
-
-        </c:when>
-        <c:otherwise>
+        
+            <%} else{%>
 
             <div class="header">
-                <img src="../src/img/cd2.png">
+                <img src="src/img/cd2.png">
                 <div class="header-right">
                     <a href="../learning-material.html">View Material</a>
-                    <a class="active" href="../loginpage.jsp">Login</a>
+                    <a class="active" href="loginpage.jsp">Login</a>
                 </div>
             </div>
-        </c:otherwise>
-    </c:choose>
+            <% } %>
 
 
 </head>
