@@ -3266,63 +3266,49 @@ img {
 /* Monospaced Typefaces (for code) */
 /* From http://cssfontstack.com */
 code, .code {
-  font-family: Consolas,
- monaco,
- monospace;
+  font-family: Consolas, monaco, monospace;
 }
 
 .courier {
-  font-family: 'Courier Next',
- courier,
- monospace;
+  font-family: 'Courier Next', courier, monospace;
 }
 
 /* Sans-Serif Typefaces */
 .helvetica {
-  font-family: 'helvetica neue', helvetica,
- sans-serif;
+  font-family: 'helvetica neue', helvetica, sans-serif;
 }
 
 .avenir {
-  font-family: 'avenir next', avenir,
- sans-serif;
+  font-family: 'avenir next', avenir, sans-serif;
 }
 
 /* Serif Typefaces */
 .athelas {
-  font-family: athelas,
- georgia,
- serif;
+  font-family: athelas, georgia, serif;
 }
 
 .georgia {
-  font-family: georgia,
- serif;
+  font-family: georgia, serif;
 }
 
 .times {
-  font-family: times,
- serif;
+  font-family: times, serif;
 }
 
 .bodoni {
-  font-family: "Bodoni MT",
- serif;
+  font-family: "Bodoni MT", serif;
 }
 
 .calisto {
-  font-family: "Calisto MT",
- serif;
+  font-family: "Calisto MT", serif;
 }
 
 .garamond {
-  font-family: garamond,
- serif;
+  font-family: garamond, serif;
 }
 
 .baskerville {
-  font-family: baskerville,
- serif;
+  font-family: baskerville, serif;
 }
 
 /*
@@ -4262,7 +4248,7 @@ code, .code {
   width: 40%;
 }
 
-.w-50 {
+.w-50, .container .sidebar .sidebar__item .box .box_cont .qNum {
   width: 50%;
 }
 
@@ -4290,7 +4276,7 @@ code, .code {
   width: 100%;
 }
 
-.w-third, .container .sidebar .sidebar__item .box .box_cont .qNum {
+.w-third {
   width: 33.33333%;
 }
 
@@ -9181,9 +9167,10 @@ a {
 
 .container .main {
   display: block;
-  width: 88%;
-  margin-left: 16%;
+  width: 85%;
+  margin-left: 14%;
   margin-right: 1%;
+  margin-bottom: 20px;
   background-color: #f8f8f8;
   text-align: center;
 }
@@ -9216,9 +9203,14 @@ a {
   list-style-type: none;
 }
 
-.container .main .button {
-  margin-left: auto;
-  margin-right: auto;
+.container .main .submit {
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+
+.container .main .submit .button {
   display: inline-block;
   border-radius: 50%;
   /* 角丸       */
@@ -9244,7 +9236,7 @@ a {
   /* 枠の指定 */
 }
 
-.container .main .button:hover {
+.container .main .submit .button:hover {
   box-shadow: none;
   /* カーソル時の影消去 */
   color: #000066;
@@ -9254,7 +9246,7 @@ a {
 }
 
 .container .sidebar {
-  width: 15%;
+  width: 13%;
   height: 95vh;
   position: fixed;
   display: block;
@@ -9284,6 +9276,8 @@ a {
 
 .container .sidebar .sidebar__item .box .box_cont .qNum .qNumD {
   border-radius: 10px;
+  border: #fafafa 1px solid;
+  border-radius: 10px;
 }
 
 .container .sidebar .sidebar__item .box .box_cont .qNum .qNumD a {
@@ -9298,6 +9292,10 @@ a {
 }
 
 .container .sidebar .sidebar__item .box .box_cont .qNum .qNumD:hover {
-  background-color: #2580a2;
+  background-color: white;
+}
+
+.container .sidebar .sidebar__item .box .box_cont .qNum .qNumD:hover a {
+  color: #2580a2;
 }
 /*# sourceMappingURL=question.css.map */

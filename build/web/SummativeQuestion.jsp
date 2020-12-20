@@ -78,7 +78,6 @@
         </div>
         <main class="main">
             <h1><a>Summative Question</a></h1>
-            <h1><%= session.getAttribute("username") %></h1>
             <form method="POST" action="SummativeServlet" >
                 <div class="question_card">
                     <div class="question"><a id="q1" class="anchor">1) Yang manakah penyataan yang tidak tepat
