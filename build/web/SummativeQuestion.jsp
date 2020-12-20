@@ -4,44 +4,7 @@
     Author     : dzilh
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    
-    <head>
-        
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <link href="src/css/question.css" rel="stylesheet">
-        <link href="src/css/material.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script type="text/javascript" src="../src/js/script.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-        <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        
-        <title>CodingSchool</title>
-        
-    </head>
-    
-    <body>
-        
-        <div class="header">
-
-        <button id="gotopbtn" onclick="goTop()">
-            <i class="material-icons">arrow_upward</i>
-        </button>
-
-        <img src="src/img/cd2.png">
-        <div class="header-right">
-            <a href="learning-material.html">View Material</a>
-            <a href="SummativeQuestion.jsp">Summative</a>
-            <a href="">Formative</a>
-            <a href="View-Performance.jsp">View Performance</a>
-            <a href="">Manage Profile</a>
-            <a class="active" href="loginpage.html">Login</a>
-        </div>
-    </div>
+    <%@ include file = "header.jsp" %>>
 
     <!--Nav Body-->
 
