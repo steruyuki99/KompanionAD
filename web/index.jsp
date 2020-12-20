@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ include file = "header.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,32 +29,17 @@
          }
         %>
 <body>
-    <div class="header">
   
-        <button id="gotopbtn" onclick="goTop()">
-          <i class="material-icons">arrow_upward</i>
-        </button>
-      
-        <img src="src/img/cd2.png">
-        <div class="header-right">
-          <a href="learning-material.html">View Material</a>
-          <a href="SummativeQuestionHome.html">Summative</a>
-          <a href="">Formative</a>
-          <a href="View-Performance.html">View Performance</a>
-          <a href="">Manage Profile</a>
-          <a class="active" href="../loginpage.html">Login</a>
-        </div>
-      </div>
 
 <!--Nav Body-->
 
     <div class="main_visual">
         <div class="slide-bottom show">
             <h2>Home</h2>
-            <a href="questions.html" class="button">Learning Material</a>
-            <a href="questions.html" class="button">Summative</a>
-            <a href="questions.html" class="button">Edit Profile</a>
-            <a href="questions.html" class="button">View Performance</a>
+            <a href="learning-material.html" class="button">View Material</a>
+            <a href="SummativeQuestionHome.html" class="button">Summative</a>
+            <a href="View-Performance.jsp" class="button">View Performance</a>
+            <a href="" class="button">Manage Profile</a>
 
         </div>
     </div>

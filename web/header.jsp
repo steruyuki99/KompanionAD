@@ -24,7 +24,7 @@
             <c:when test="${!un.equals(null)}">
 
             <div class="header">
-                <img src="../src/img/cd2.png">
+                <img src="src/img/cd2.png">
                 <div class="header-right">
                     <a href="../learning-material.html">View Material</a>
                     <a href="../SummativeQuestionHome.html">Summative</a>
