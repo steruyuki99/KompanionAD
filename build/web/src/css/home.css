@@ -50,7 +50,9 @@ header nav ul li {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("src/img/3040791.jpg");
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
 }
 
 .main_visual a {
