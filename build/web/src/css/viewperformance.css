@@ -7,7 +7,9 @@ body {
   margin-left: 0px;
   width: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f5f9;
 }
+
 #nav-body {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -19,7 +21,7 @@ body {
 }
 
 
-#menu {
+#nav-body #menu {
   margin: left;
   padding: 0;
   width: 15%;
@@ -114,12 +116,13 @@ body {
   height: 60px;
 }
 
-#content-wrapper {
+#nav-body #content-wrapper {
   margin-left: 17%;
+  width: 100%;
   text-align: center;
 }
 
-#content {
+#nav-body #content-wrapper #content {
   font-size: medium;
   color: #171718;
   background-color: #fff;
@@ -131,10 +134,14 @@ body {
   vertical-align: 5%;
   clear: both;
   border: 20px #c83750;
+  margin-left: 200px;
   padding-left: 10px;
   font-family: "Ubuntu Mono", monospace;
 }
 
+#conten div{
+    padding: 20px;
+}
 
 #content-image{
   height: auto;

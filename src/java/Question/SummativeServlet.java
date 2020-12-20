@@ -7,38 +7,25 @@ package Question;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
 import javax.servlet.http.HttpSession;
 import jdbc.JDBCUtility;
-import Question.Answer;
+
 /**
  *
- * @author Asus
+ * @author dzilh
  */
-@WebServlet(name = "SummativeServlet", urlPatterns = "/SummativeServlet")
 public class SummativeServlet extends HttpServlet {
+    
     private JDBCUtility jdbcUtility;
     private Connection con;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/SummativeQuestion.html");
-
-        requestDispatcher.forward(req, resp);
-    }
-
-    @Override
-    public void init() throws ServletException
-    {
+    public void init() throws ServletException {
         String driver = "com.mysql.jdbc.Driver";
 
         String dbName = "webapplicationad";
@@ -47,101 +34,97 @@ public class SummativeServlet extends HttpServlet {
         String password = "";
 
         jdbcUtility = new JDBCUtility(driver,
-                                      url,
-                                      userName,
-                                      password);
+                url,
+                userName,
+                password);
 
         jdbcUtility.jdbcConnect();
         con = jdbcUtility.jdbcGetConnection();
     }
     
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+        
+        response.setContentType("text/html;charset=UTF-8");
+        
+        HttpSession session = request.getSession(true);
+        String username = (String) session.getAttribute("username");
+        
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            
+            try {
+                
+                String sqlInsert = "INSERT INTO summative(username, ans1, ans2, ans3, ans4, ans5, ans6) VALUES(?,?,?,?,?,?,?)";
+                try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
+                    as.setString(1, username);
+                    as.setString(2, request.getParameter("jawapan1"));
+                    as.setString(3, request.getParameter("jawapan2"));
+                    as.setString(4, request.getParameter("jawapan3"));
+                    as.setString(5, request.getParameter("jawapan4"));
+                    as.setString(6, request.getParameter("jawapan5"));
+                    as.setString(7, request.getParameter("jawapan6"));
+                    
+                    as.executeUpdate();
+                }
+                con.close();
+                
+            } catch (SQLException ex) {
+                
+            }
+            
+            request.setAttribute("successMessage", "Successfully Registered");
+            request.getRequestDispatcher("/SummativeQuestion.jsp").forward(request, response);
+            
+        }
+    }
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-     HttpSession session = request.getSession();
-     String username=(String)request.getAttribute("userID");
-     String j1=  request.getParameter("jawapan1");
-     String j2=  request.getParameter("jawapan2");
-     String j3 = request.getParameter("jawapan3");
-     String j4 = request.getParameter("jawapan4");
-     String j5 = request.getParameter("jawapan5");
-     String j6 = request.getParameter("jawapan6");
-     boolean c1,c2,c3,c4,c5,c6;
-     
-     if(j1.equals("A")){
-         c1=true;
-     }
-     else{
-         c1=false;
-     }
-     
-     if(j2.equals("B")){
-         c2=true;
-     }
-     else{
-         c2=false;
-     }
-       
-     if(j3.equals("C")){
-         c3=true;
-     }
-     else{
-         c3=false;
-     }
-         
-    if(j4.equals("D")){
-         c4=true;
-     }
-     else{
-         c4=false;
-     }
-           
-     if(j5.equals("A")){
-         c5=true;
-     }
-     else{
-         c5=false;
-     }
-     
-       if(j6.equals("B")){
-         c6=true;
-     }
-     else{
-         c6=false;
-     }
-     try{
-         PreparedStatement ps = null;
-         ps = con.prepareStatement ("INSERT INTO sumstuans(userID, Ans1, Ans2, Ans3, Ans4, Ans5, Ans6) VALUES(?,?,?,?,?,?,?)");
-         username="test";
-          ps.setString (1, username);
-          ps.setString (2, j1);
-          ps.setString (3, j2);
-          ps.setString (4, j3);
-          ps.setString(5, j4);
-          ps.setString(6, j5);
-          ps.setString(7, j6);
-          ps.executeUpdate();
-     }
-         catch(SQLException ex){
-
-        }
-     
-     try(PrintWriter out = response.getWriter()){
-      
-       ArrayList<Answer> ans = new ArrayList<Answer>();
-       
-       ans.add(new Answer(c1, j1));
-       ans.add(new Answer(c2, j2));
-       ans.add(new Answer(c3, j3));
-       ans.add(new Answer(c4, j4));
-       ans.add(new Answer(c5, j5));
-       ans.add(new Answer(c6, j6));
-       
-       request.setAttribute("data", ans);
-       RequestDispatcher rd =  
-         request.getRequestDispatcher("AnsSummative.jsp"); 
-        rd.forward(request, response); 
-        
-     }
-       response.sendRedirect ("AnsSummative.jsp");
+        processRequest(request, response);
     }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
 }

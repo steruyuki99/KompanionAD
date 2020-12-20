@@ -1,39 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<%-- 
+    Document   : SummativeQuestion
+    Created on : Dec 19, 2020, 11:52:46 PM
+    Author     : dzilh
+--%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="src/css/question.css" rel="stylesheet">
-    <link href="src/css/material.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="../src/js/script.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <title>CodingSchool</title>
-</head>
-
-<body>
-    <div class="header">
-
-        <button id="gotopbtn" onclick="goTop()">
-            <i class="material-icons">arrow_upward</i>
-        </button>
-
-        <img src="src/img/cd2.png">
-        <div class="header-right">
-            <a href="learning-material.html">View Material</a>
-            <a href="SummativeQuestionHome.html">Summative</a>
-            <a href="">Formative</a>
-            <a href="View-Performance.html">View Performance</a>
-            <a href="">Manage Profile</a>
-            <a class="active" href="loginpage.html">Login</a>
-        </div>
-    </div>
+    <%@ include file = "header.jsp" %>>
 
     <!--Nav Body-->
 
@@ -42,7 +13,7 @@
             <div class="sidebar__item">
 
                 <h5 class="active">Questions</h5>
-                <div class="box">
+                <div class="box" style="margin-left: 40px;">
                     <div class="box_cont">
                         <div class="qNum">
                             <div class="qNumD"><a href="#q1"> 1 </a> </div>
@@ -74,6 +45,7 @@
         </div>
         <main class="main">
             <h1><a>Summative Question</a></h1>
+            <h1><%= session.getAttribute("username") %></h1>
             <form method="POST" action="SummativeServlet" >
                 <div class="question_card">
                     <div class="question"><a id="q1" class="anchor">1) Yang manakah penyataan yang tidak tepat
@@ -84,26 +56,26 @@
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan1" value="1A">
+                                    <input type="radio" class="radio" name="jawapan1" value="A">
                                     Membantu pengembangan sesuatu
                                     konsep
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan1" value="1B">
+                                    <input type="radio" class="radio" name="jawapan1" value="B">
                                     Menggalakkan pembelajaran kendiri
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan1" value="1C">
+                                    <input type="radio" class="radio" name="jawapan1" value="C">
                                     Menggalakkan pembelajaran kendiri
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan1" value="1D">
+                                    <input type="radio" class="radio" name="jawapan1" value="D">
                                     Mewujudkan komunikasi sehala
                                 </label>
                             </li>
@@ -120,7 +92,7 @@
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan2" value="2A">
+                                    <input type="radio" class="radio" name="jawapan2" value="A">
                                     Proses mendalami butiran sesuatu
                                     masalah untuk mendapatkan satu
                                     penyelesaian.
@@ -128,7 +100,7 @@
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan2" value="2B">
+                                    <input type="radio" class="radio" name="jawapan2" value="B">
                                     Proses mengkaji butiran sesuatu
                                     masalah untuk mendapatkan satu
                                     penyelesaian.
@@ -136,7 +108,7 @@
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan2" value="2C">
+                                    <input type="radio" class="radio" name="jawapan2" value="C">
                                     Proses mengulang kaji butiran sesuatu
                                     masalah untuk mendapatkan satu
                                     penyelesaian.
@@ -144,7 +116,7 @@
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan2" value="2D">
+                                    <input type="radio" class="radio" name="jawapan2" value="D">
                                     Proses mereka bentuk butiran sesuatu
                                     masalah untuk mendapatkan satu
                                     penyelesaian.
@@ -167,25 +139,25 @@
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan3" value="3A">
+                                    <input type="radio" class="radio" name="jawapan3" value="A">
                                     a) I dan II
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan3" value="3B">
+                                    <input type="radio" class="radio" name="jawapan3" value="B">
                                     b) I, II dan III
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan3" value="3C">>
+                                    <input type="radio" class="radio" name="jawapan3" value="C">>
                                     c) II, III dan IV
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan3" value="3D">
+                                    <input type="radio" class="radio" name="jawapan3" value="D">
                                     d) Semua di atas
                                 </label>
                             </li>
@@ -205,25 +177,25 @@
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan4" value="4A">
+                                    <input type="radio" class="radio" name="jawapan4" value="A">
                                     a) I dan II
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan4" value="4B">
+                                    <input type="radio" class="radio" name="jawapan4" value="B">
                                     b) I, II dan III
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan4" value="4C">
+                                    <input type="radio" class="radio" name="jawapan4" value="C">
                                     c) II, III dan IV
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan4" value="4D">
+                                    <input type="radio" class="radio" name="jawapan4" value="D">
                                     d) Semua di atas
                                 </label>
                             </li>
@@ -252,26 +224,26 @@
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan5" value="5A">
+                                    <input type="radio" class="radio" name="jawapan5" value="A">
                                     Membantu pengembangan sesuatu
                                     konsep
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan5" vlaue="5B">
+                                    <input type="radio" class="radio" name="jawapan5" value="B">
                                     Menggalakkan pembelajaran kendiri
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan5" value="5C">
+                                    <input type="radio" class="radio" name="jawapan5" value="C">
                                     Menggalakkan pembelajaran kendiri
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan5" value="5D">
+                                    <input type="radio" class="radio" name="jawapan5" value="D">
                                     Mewujudkan komunikasi sehala
                                 </label>
                             </li>
@@ -287,21 +259,21 @@
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan6" value="6A">
+                                    <input type="radio" class="radio" name="jawapan6" value="A">
                                     Pengatur cara dapat menjalankan atur
                                     cara tanpa sebarang ralat.
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan6" value="6B">
+                                    <input type="radio" class="radio" name="jawapan6" value="B">
                                     Pengatur cara dapat menulis kod atur
                                     cara dengan baik.
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan6" value="6C">
+                                    <input type="radio" class="radio" name="jawapan6" value="C">
                                     pengatur cara dapat mempraktikkan
                                     amalan-amalan yang biasa diikuti untuk
                                     menghasilkan atur cara yang baik.
@@ -309,7 +281,7 @@
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
-                                    <input type="radio" class="radio" name="jawapan6" value="6D">
+                                    <input type="radio" class="radio" name="jawapan6" value="D">
                                     pengatur cara dapat menghasilkan atur
                                     cara yang bebas ralat yang senang
                                     untuk difahami.
@@ -318,27 +290,28 @@
                         </ul>
                     </div>
 
-                    <div class="submit">
+                    <div class="submit" style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
                         <input type="submit" value="Submit" class="button">
                     </div>
 
                 </div>
             </form>
-
+        </main>
     </div>
-</body>
-
-<script>
-    $(function () {
-        $('a[href^="#"]').click(function () {
-            var time = 500;
-            var href = $(this).attr("href");
-            var target = $(href == "#" || href == "" ? 'html' : href);
-            var position = target.offset().top;
-            $("html,body").animate({ scrollTop: position }, time, "swing");
-            return false;
+        
+    </body>
+    
+    <script>
+        $(function () {
+            $('a[href^="#"]').click(function () {
+                var time = 500;
+                var href = $(this).attr("href");
+                var target = $(href === "#" || href === "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html,body").animate({ scrollTop: position }, time, "swing");
+                return false;
+            });
         });
-    });
-</script>
-
+    </script>
+    
 </html>
