@@ -1,44 +1,55 @@
 <%-- 
-    Document   : index
-    Created on : Dec 20, 2020, 10:57:03 AM
-    Author     : Asus
+    Document   : header
+    Created on : Dec 20, 2020, 9:09:05 AM
+    Author     : Amir
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file = "header.jsp" %>
+
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="src/css/material.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <title>CodingSchool Material</title>
+        <script type="text/javascript" src="src/js/script.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="src/css/home.css" rel="stylesheet">
-    <link href="src/css/question.css" rel="stylesheet">
-    <link href="src/css/material.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="../src/js/script.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <title>CodingSchool</title>
+
+        <%if(session.getAttribute("username") !=null) {%>
+
+            <div class="header">
+                <a href="index.jsp"><img src="src/img/cd2.png" ></a>
+                <div class="header-right">
+                    <a href="../learning-material.html">View Material</a>
+                    <a href="../SummativeQuestionHome.html">Summative</a>
+                    <a href="../">Formative</a>
+                    <a href="../View-Performance.html">View Performance</a>
+                    <a href="../">Manage Profile</a>
+                    <a class="active" href="<%=request.getContextPath()%>/logoutServlet">Logout</a>
+                </div>
+            </div>
+        
+            <%} else{%>
+
+            <div class="header">
+                <img src="src/img/cd2.png">
+                <div class="header-right">
+                    <a href="../learning-material.html">View Material</a>
+                    <a class="active" href="loginpage.jsp">Login</a>
+                </div>
+            </div>
+            <% } %>
+
+
 </head>
-    
 <body>
-  
 
-<!--Nav Body-->
-
-    <div class="main_visual">
-        <div class="slide-bottom show">
-            <h2>Home</h2>
-            <a href="learning-material.html" class="button">View Material</a>
-            <a href="SummativeQuestion.jsp" class="button">Summative</a>
-            <a href="View-Performance.jsp" class="button">View Performance</a>
-            <a href="" class="button">Manage Profile</a>
-
-        </div>
-    </div>
 </body>
-
 </html>

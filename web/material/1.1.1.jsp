@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file = "header.jsp" %>
+<%@ include file = "../header.jsp" %>
 <%@ include file = "../navmenu.jsp" %>
 
 
@@ -32,6 +32,10 @@
 
         <!--Header-->
 
+
+
+
+
         <!--Nav body -->
 
 
@@ -43,7 +47,13 @@
             <div id="content-wrapper">
                 <div id="content">
                     <h1>Strategi Penyelesaian Masalah</h1>
-                  
+                    <h1>${username}</h1>
+
+                    <% if (session.getAttribute("username") == null) { %>
+                    <p> some content </p>
+                    <% } else {%>
+                    <p> other content </p>
+                    <% } %>
 
                     <p>Masalah ialah keraguan, situasi yang tidak diingini, cabaran dan peluang
                         yang dihadapi dalam kehidupan seseorang. Kemahiran membuat
