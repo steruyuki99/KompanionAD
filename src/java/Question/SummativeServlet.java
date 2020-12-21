@@ -83,7 +83,7 @@ public class SummativeServlet extends HttpServlet {
             }
             
             request.setAttribute("successMessage", "Successfully Registered");
-            request.getRequestDispatcher("/SummativeQuestion.jsp").forward(request, response);
+            request.getRequestDispatcher("/AnsSummative.jsp").forward(request, response);
             
         }
     }
