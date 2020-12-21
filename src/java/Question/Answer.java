@@ -17,13 +17,22 @@ public class Answer {
     private String username;
     private JDBCUtility jdbcUtility;
     private Connection con;
-    private boolean ans;
+    private boolean ans1;
+    private boolean ans2;
+    private boolean ans3;
+    private boolean ans4;
+    private boolean ans5;
+    private boolean ans6;
     private String answer1;
     private String answer2;
     private String answer3;
     private String answer4;
     private String answer5;
     private String answer6;
+    
+    public Answer(){
+        
+    }
     
     public void setAnswer1 (String a){
         this.answer1 = a;
@@ -77,7 +86,7 @@ public class Answer {
         return answer6;
     }
     
-    public ArrayList<Answer> getAnswerRecords(String user) throws SQLException{
+    public ArrayList<String> getAnswerRecords(String user) throws SQLException{
         
         String driver = "com.mysql.jdbc.Driver";
         String dbName = "webapplicationad";
@@ -89,33 +98,27 @@ public class Answer {
         jdbcUtility.jdbcConnect();
         con = jdbcUtility.jdbcGetConnection();
         
-        ArrayList<Answer> sqList = new ArrayList();
+        ArrayList<String> answerList = new ArrayList();
         
         try (Statement stmt = con.createStatement()) {
-            String sql = "SELECT * FROM summative";
+            String sql = "SELECT ans1, ans2, ans3, ans4, ans5, ans6 FROM summative WHERE username='" + user + "'";
             ResultSet rs = stmt.executeQuery(sql);
             
             while (rs.next()){
-                
-                Answer sq = new Answer();
-                
-                sq.setUsername(user);
-                sq.setAnswer1(rs.getString(2));
-                sq.setAnswer2(rs.getString(3));
-                sq.setAnswer3(rs.getString(4));
-                sq.setAnswer4(rs.getString(5));
-                sq.setAnswer5(rs.getString(6));
-                sq.setAnswer6(rs.getString(7));
-                
-                sqList.add(sq);
+                answerList.add(rs.getString("ans1"));
+                answerList.add(rs.getString("ans2"));
+                answerList.add(rs.getString("ans3"));
+                answerList.add(rs.getString("ans4"));
+                answerList.add(rs.getString("ans5"));
+                answerList.add(rs.getString("ans6"));
             }
         }
         con.close();
         
-        return sqList;
+        return answerList;
     }
     
-    public int getScore() throws SQLException{
+    public int getScore(String user) throws SQLException{
         
         int score = 0;
         
@@ -130,15 +133,18 @@ public class Answer {
         con = jdbcUtility.jdbcGetConnection();
         
         try (Statement stmt = con.createStatement()) {
-            String sql = "SELECT * FROM summative";
+            String sql = "SELECT ans1, ans2, ans3, ans4, ans5, ans6 FROM summative WHERE username='" + user + "'";
             ResultSet rs = stmt.executeQuery(sql);
             
-            this.answer1 = rs.getString(2);
-            this.answer2 = rs.getString(3);
-            this.answer3 = rs.getString(4);
-            this.answer4 = rs.getString(5);
-            this.answer5 = rs.getString(6);
-            this.answer6 = rs.getString(7);
+            while(rs.next()){
+                this.answer1 = rs.getString("ans1");
+                this.answer2 = rs.getString("ans2");
+                this.answer3 = rs.getString("ans3");
+                this.answer4 = rs.getString("ans4");
+                this.answer5 = rs.getString("ans5");
+                this.answer6 = rs.getString("ans6");
+            }
+            
             
             if(this.answer1.equals("A")){
                 score++;
@@ -170,8 +176,6 @@ public class Answer {
         return score;
     }
     
-    /*public boolean getResult(){
-        return ans;
-    }*/
+    
         
 }

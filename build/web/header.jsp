@@ -27,10 +27,10 @@
             <div class="header">
                 <a href="index.jsp"><img src="src/img/cd2.png" ></a>
                 <div class="header-right">
-                    <a href="../learning-material.html">View Material</a>
-                    <a href="../SummativeQuestionHome.html">Summative</a>
+                    <a href="learning-material.html">View Material</a>
+                    <a href="SummativeQuestion.jsp">Summative</a>
                     <a href="../">Formative</a>
-                    <a href="../View-Performance.html">View Performance</a>
+                    <a href="View-Performance.jsp">View Performance</a>
                     <a href="../">Manage Profile</a>
                     <a class="active" href="<%=request.getContextPath()%>/logoutServlet">Logout</a>
                 </div>

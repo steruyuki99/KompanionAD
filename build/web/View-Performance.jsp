@@ -2,8 +2,18 @@
 
     <%@page contentType="text/html" pageEncoding="UTF-8" %>
         <%@page import="javax.servlet.http.HttpSession" %>
-            <%@ include file="header.jsp" %>
-
+        <%@page import="Question.Answer" %>
+        <%@page import="java.sql.*" %>
+        <%@page import="jdbc.JDBCUtility" %>
+        <%@ include file="header.jsp" %>
+            
+            <%
+                String username=(String)session.getAttribute("username");
+                
+                Answer a = new Answer();
+                
+                int summative_score = a.getScore(username);
+            %>
 
                 <!DOCTYPE html>
                 <html>
@@ -46,90 +56,88 @@
                                             <a href="#">7. Pembangunan Aplikasi</a>
                                         </div>
                                     </li>
-                                    <li><a href="#">Summative</a></li>
                                 </div>
-                                
+                                <li><a href="ViewPerformanceCheckSummative.jsp" style="text-decoration: none; color: white;">Summative</a></li>
                             </ul>
                         </div>
 
-                        <%String username=(String)session.getAttribute("username");%>
-                            <div class="content-wrapper">
-                                <h1>Overall Performance by  <%= session.getAttribute("username") %></h1>
-         
-                                <table border="1">
-                                        <th colspan="3"
-                                            style="padding: 15px 15px; text-align: center; background-color: darkblue; color: whitesmoke;">
-                                            Formative Performance</th>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            style="padding-left: 180px; padding-right: 180px; padding-top: 10px; padding-bottom: 10px;">
-                                            Subtopic</th>
-                                        <th style="padding-left: 60px; padding-right: 60px;">Score</th>
-                                        <th style="padding-left: 60px; padding-right: 60px;">Check</th>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 5px 5px;">1.1 Strategi Penyelesaian Masalah</td>
-                                        <td style="text-align: center;">0/5</td>
-                                        <td style="text-align: center;"><a href="#"
-                                                style="text-decoration: underline; color: blue;">view</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 5px 5px;">1.2 Algoritma</td>
-                                        <td style="text-align: center;">0/5</td>
-                                        <td style="text-align: center;"><a href="#"
-                                                style="text-decoration: underline; color: blue;">view</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 5px 5px;">1.3 Pemboleh Ubah, Pemalar dan Jenis Data</td>
-                                        <td style="text-align: center;">0/5</td>
-                                        <td style="text-align: center;"><a href="#"
-                                                style="text-decoration: underline; color: blue;">view</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 5px 5px;">1.4 Struktur Kawalan</td>
-                                        <td style="text-align: center;">0/5</td>
-                                        <td style="text-align: center;"><a href="#"
-                                                style="text-decoration: underline; color: blue;">view</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 5px 5px;">1.5 Amalan Terbaik Pengatucaraan</td>
-                                        <td style="text-align: center;">0/5</td>
-                                        <td style="text-align: center;"><a href="#"
-                                                style="text-decoration: underline; color: blue;">view</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 5px 5px;">1.6 Struktur Data dan Modular</td>
-                                        <td style="text-align: center;">0/5</td>
-                                        <td style="text-align: center;"><a href="#"
-                                                style="text-decoration: underline; color: blue;">view</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 5px 5px;">1.7 Pembangunan Aplikasi</td>
-                                        <td style="text-align: center;">0/5</td>
-                                        <td style="text-align: center;"><a href="#"
-                                                style="text-decoration: underline; color: blue;">view</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="3"
-                                            style="padding: 15px 15px; text-align: center; background-color: darkblue; color: whitesmoke;">
-                                            Summative Performance</th>
-                                    </tr>
-                                    <tr>
-                                        <th
-                                            style="padding-left: 180px; padding-right: 180px; padding-top: 10px; padding-bottom: 10px;">
-                                            Subtopic</th>
-                                        <th style="padding-left: 60px; padding-right: 60px;">Score</th>
-                                        <th style="padding-left: 60px; padding-right: 60px;">Check</th>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 5px 5px;">Summative</td>
-                                        <td style="text-align: center;">0/6</td>
-                                        <td style="text-align: center;"><a href="#"
-                                                style="text-decoration: underline; color: blue;">view</a></td>
-                                    </tr>
-                                </table>
-                            </div>
+                        <div class="content-wrapper">
+                            <h1><%= session.getAttribute("username") %>'s Overall Performance</h1>
+
+                            <table border="1">
+                                    <th colspan="3"
+                                        style="padding: 15px 15px; text-align: center; background-color: darkblue; color: whitesmoke;">
+                                        Formative Performance</th>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="padding-left: 180px; padding-right: 180px; padding-top: 10px; padding-bottom: 10px;">
+                                        Subtopic</th>
+                                    <th style="padding-left: 60px; padding-right: 60px;">Score</th>
+                                    <th style="padding-left: 60px; padding-right: 60px;">Check</th>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 5px;">1.1 Strategi Penyelesaian Masalah</td>
+                                    <td style="text-align: center;">0/5</td>
+                                    <td style="text-align: center;"><a href="#"
+                                            style="text-decoration: underline; color: blue;">view</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 5px;">1.2 Algoritma</td>
+                                    <td style="text-align: center;">0/5</td>
+                                    <td style="text-align: center;"><a href="#"
+                                            style="text-decoration: underline; color: blue;">view</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 5px;">1.3 Pemboleh Ubah, Pemalar dan Jenis Data</td>
+                                    <td style="text-align: center;">0/5</td>
+                                    <td style="text-align: center;"><a href="#"
+                                            style="text-decoration: underline; color: blue;">view</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 5px;">1.4 Struktur Kawalan</td>
+                                    <td style="text-align: center;">0/5</td>
+                                    <td style="text-align: center;"><a href="#"
+                                            style="text-decoration: underline; color: blue;">view</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 5px;">1.5 Amalan Terbaik Pengatucaraan</td>
+                                    <td style="text-align: center;">0/5</td>
+                                    <td style="text-align: center;"><a href="#"
+                                            style="text-decoration: underline; color: blue;">view</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 5px;">1.6 Struktur Data dan Modular</td>
+                                    <td style="text-align: center;">0/5</td>
+                                    <td style="text-align: center;"><a href="#"
+                                            style="text-decoration: underline; color: blue;">view</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 5px;">1.7 Pembangunan Aplikasi</td>
+                                    <td style="text-align: center;">0/5</td>
+                                    <td style="text-align: center;"><a href="#"
+                                            style="text-decoration: underline; color: blue;">view</a></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="3"
+                                        style="padding: 15px 15px; text-align: center; background-color: darkblue; color: whitesmoke;">
+                                        Summative Performance</th>
+                                </tr>
+                                <tr>
+                                    <th
+                                        style="padding-left: 180px; padding-right: 180px; padding-top: 10px; padding-bottom: 10px;">
+                                        Subtopic</th>
+                                    <th style="padding-left: 60px; padding-right: 60px;">Score</th>
+                                    <th style="padding-left: 60px; padding-right: 60px;">Check</th>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 5px;">Summative</td>
+                                    <td style="text-align: center;"><%=summative_score%>/6</td>
+                                    <td style="text-align: center;"><a href="ViewPerformanceCheckSummative.jsp"
+                                            style="text-decoration: underline; color: blue;">view</a></td>
+                                </tr>
+                            </table>
+                        </div>
 
                     </div>
 

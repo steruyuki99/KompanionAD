@@ -5,6 +5,19 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Question.Answer" %>
+<%@page import="java.util.ArrayList"%>
+
+<%
+    String username=(String)session.getAttribute("username");
+    
+    Answer a = new Answer();
+    
+    ArrayList<String> answerList = new ArrayList<String>();
+    
+    answerList = a.getAnswerRecords(username);
+%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,9 +26,8 @@
     <link href="src/css/material.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="../src/js/script.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-       <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     
     <title>CodingSchool</title>
@@ -32,7 +44,7 @@
             <a href="learning-material.html">View Material</a>
             <a href="SummativeQuestionHome.html">Summative</a>
             <a href="">Formative</a>
-            <a href="View-Performance.html">View Performance</a>
+            <a href="View-Performance.jsp">View Performance</a>
             <a href="">Manage Profile</a>
             <a class="active" href="loginpage.html">Login</a>
         </div>
@@ -42,22 +54,43 @@
               <table class="f6 w-100 mw8 center" cellspacing="0">
                 <thead>
                   <tr>
-                    <th class="fw6 bb b--black-20 tl pb3 pr3 bg-white"> Jawapan</th>
-                    <th class="fw6 bb b--black-20 tl pb3 pr3 bg-white"> Jawapan Murid</th>
+                    <th class="fw6 bb b--black-20 tc pb3 pr3 bg-white">Jawapan</th>
+                    <th class="fw6 bb b--black-20 tc pb3 pr3 bg-white">Jawapan Murid</th>
                   </tr>
                 </thead>
                 <tbody class="lh-copy">
-                <% 
-               ArrayList<Answer> ans  =  
-            (ArrayList<Answer>)request.getAttribute("data"); 
-             for(Ansd a:ans){%> 
-        <%-- Arranging data in tabular form 
-        --%> 
-                  <tr>
-                    <td class="pv3 pr3 bb b--black-20"><%=ans.getAnswer()%></td>
-                    <td class="pv3 pr3 bb b--black-20"><%=ans.getResult()%></td>
-                  </tr>
-                  <%  }%> 
+                
+                    <tr>
+                        <td class="pv3 pr3 b--black-20"><%=answerList.get(0)%></td>
+                        <td class="pv3 pr3 b--black-20">A</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="pv3 pr3 bb b--black-20">
+                            <h3 style="color: green">CORRECT</h3>
+                            <h4>The answer is <b>A</b></h4>
+                            Membantu pengembangan sesuatu konsep
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pv3 pr3 bb b--black-20"><%=answerList.get(1)%></td>
+                        <td class="pv3 pr3 bb b--black-20">B</td>
+                    </tr>
+                    <tr>
+                        <td class="pv3 pr3 bb b--black-20"><%=answerList.get(2)%></td>
+                        <td class="pv3 pr3 bb b--black-20">C</td>
+                    </tr>
+                    <tr>
+                        <td class="pv3 pr3 bb b--black-20"><%=answerList.get(3)%></td>
+                        <td class="pv3 pr3 bb b--black-20">D</td>
+                    </tr>
+                    <tr>
+                        <td class="pv3 pr3 bb b--black-20"><%=answerList.get(4)%></td>
+                        <td class="pv3 pr3 bb b--black-20">A</td>
+                    </tr>
+                    <tr>
+                        <td class="pv3 pr3 bb b--black-20"><%=answerList.get(5)%></td>
+                        <td class="pv3 pr3 bb b--black-20">B</td>
+                    </tr>
                   
                 </tbody>
               </table>
