@@ -77,8 +77,8 @@ public class loginServlet extends HttpServlet {
 
                     HttpSession session = request.getSession(true);
                     session.setAttribute("username", usern);
-                    RequestDispatcher rd = request.getRequestDispatcher("material/1.1.1.jsp");
-                    rd.forward(request, response);
+                    response.sendRedirect("material/1.1.1.jsp");
+                    
                 }
             }
             // PrintWriter out = response.getWriter();

@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file = "../header.jsp" %>
+<%@ include file = "header-material.jsp" %>
 <%@ include file = "../navmenu.jsp" %>
 
 <html>
@@ -30,23 +30,15 @@
     
   <!--Header-->
   
-  
-  
-  
     <button id="gotopbtn" onclick="goTop()">
       <i class="material-icons">arrow_upward</i>
     </button>
-  
-  
   
   
   <!--Nav body -->
 
 
 <div id="nav-body">
-
-
-
 
     <!--end menu div-->
 

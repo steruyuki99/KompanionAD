@@ -32,7 +32,7 @@
     <div class="main_visual">
         <div class="slide-bottom show">
             <h2>Home</h2>
-            <a href="learning-material.html" class="button">View Material</a>
+            <a href="material/material_index.jsp" class="button">View Material</a>
             <a href="SummativeQuestion.jsp" class="button">Summative</a>
             <a href="View-Performance.jsp" class="button">View Performance</a>
             <a href="" class="button">Manage Profile</a>
