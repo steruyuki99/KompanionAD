@@ -26,7 +26,11 @@
                     <title>CodingSchool</title>
 
                 </head>
-
+ <%
+         if(session.getAttribute("username")==null){
+             response.sendRedirect("loginpage.jsp");
+         }
+        %>
                 <body>
 
 
