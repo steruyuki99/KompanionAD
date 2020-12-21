@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ec67af11-8bb8-4667-9a51-8eed1e147184" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/.netbeans_automatic_build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/.netbeans_update_resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/web/gfv3ee6.dpf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/web/material/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/material-index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/material-index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/src/css/home.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/src/css/home.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/src/scss/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/src/scss/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/material-index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/material-index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/css/home.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/css/home.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/scss/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/scss/home.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lwz5RrbB2SiB82FdWN7yOzHmwX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec67af11-8bb8-4667-9a51-8eed1e147184" name="Default Changelist" comment="" />
+      <created>1608522757460</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608522757460</updated>
+      <workItem from="1608522759170" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
