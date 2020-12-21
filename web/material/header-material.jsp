@@ -11,8 +11,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-        
+
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../src/css/material.css" rel="stylesheet">
@@ -24,28 +24,28 @@
 
         <%if(session.getAttribute("username") !=null) {%>
 
-            <div class="header">
-                <a href="../index.jsp"><img src="../src/img/cd2.png" ></a>
-                <div class="header-right">
-                    <a href="../material_index.jsp">View Material</a>
-                    <a href="../SummativeQuestionHome.jsp">Summative</a>
-                    <a href="../">Formative</a>
-                    <a href="../View-Performance.jsp">View Performance</a>
-                    <a href="../">Manage Profile</a>
-                    <a class="active" href="<%=request.getContextPath()%>/logoutServlet">Logout</a>
-                </div>
-            </div>
-        
-            <%} else{%>
+    <div class="header">
+        <a href="../index.jsp"><img src="../src/img/cd2.png" ></a>
+        <div class="header-right">
+            <a href="../material_index.jsp">View Material</a>
+            <a href="../SummativeQuestionHome.jsp">Summative</a>
+            <a href="../">Formative</a>
+            <a href="../View-Performance.jsp">View Performance</a>
+            <a href="../">Manage Profile</a>
+            <a class="active" href="<%=request.getContextPath()%>/logoutServlet">Logout</a>
+        </div>
+    </div>
 
-            <div class="header">
-                <img src="../src/img/cd2.png">
-                <div class="header-right">
-                    <a href="material_index.jsp">View Material</a>
-                    <a class="active" href="../loginpage.jsp">Login</a>
-                </div>
-            </div>
-            <% } %>
+    <%} else{%>
+
+    <div class="header">
+        <img src="../src/img/cd2.png">
+        <div class="header-right">
+            <a href="material_index.jsp">View Material</a>
+            <a class="active" href="../loginpage.jsp">Login</a>
+        </div>
+    </div>
+    <% } %>
 
 
 </head>
