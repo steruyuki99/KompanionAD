@@ -4,12 +4,18 @@
   display: flex;
   margin-top: 100px;
   font-family: "Ubuntu Mono", monospace;
+  /*    {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  this adds the "card" effect 
+        padding: 16px;
+        text-align: center;
+        background-color: red;
+    }*/
 }
 
 .container .nav {
   width: 13%;
   height: 90vh;
-  position: fixed;
+  position: static;
   display: block;
   top: 60px;
   text-align: center;
@@ -81,7 +87,7 @@
   align-items: center;
   height: auto;
   overflow: hidden;
-  position: fixed;
+  position: static;
   z-index: 5;
 }
 
