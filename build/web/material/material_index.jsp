@@ -39,7 +39,7 @@
                 <a href="1.5.1.jsp" class="button">Amalan Terbaik Pengaturcaraan</a>
                 <a href="1.6.1.jsp" class="button">Struktur Data dan Modular</a>
                 <a href="1.7.1.jsp" class="button">Pembangunan Aplikasi</a>
-                <a href="summary.jsp" class="button">Summary</a>
+                <a href="Summary.jsp" class="button">Summary</a>
 
             </div>
         </div>
