@@ -13,7 +13,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="src/css/home.css" rel="stylesheet">
-    <link href="src/css/question.css" rel="stylesheet">
     <link href="src/css/material.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="../src/js/script.js"></script>
@@ -29,7 +28,7 @@
 
 <!--Nav Body-->
 
-    <div class="main_visual">
+    <div class="main_visual" style="margin-top: 50px;">
         <div class="slide-bottom show">
             <h2>Home</h2>
             <a href="material/1.1.1.jsp" class="button">Strategi Penyelesaian Masalah</a>

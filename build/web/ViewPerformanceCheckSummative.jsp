@@ -15,7 +15,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <!--<link href="src/css/viewperformance.css" rel="stylesheet">-->
-        <link href="src/css/vPerformace.css" rel="stylesheet">
+        <link href="src/css/vPerformance2.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script type="text/javascript" src="../src/js/script.js"></script>
         <link rel="stylesheet" type="text/css"
