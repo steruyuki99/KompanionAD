@@ -4,14 +4,15 @@
     Author     : dzilh
 --%>
 
-    <%@ include file = "header.jsp" %>>
+    <%@ include file = "header.jsp" %>
+    <%@ include file = "navFormative.jsp" %>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="src/css/question.css" rel="stylesheet">
         <link href="src/css/material.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script type="text/javascript" src="../src/js/script.js"></script>
+        <script type="text/javascript" src="src/js/script.js"></script>
         <link rel="stylesheet" type="text/css"
             href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
         <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -29,7 +30,7 @@
        
     <!--Nav Body-->
 
-    <div class="container">
+<!--    <div class="container">
         <div class="sidebar">
             <div class="sidebar__item">
                 <h5 class="active">Questions</h5>
@@ -49,7 +50,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
+
+<!<!-- main -->
+
+
         <main class="main">
             <h1><a>Formative Question 1.1</a></h1>
             <form method="POST" action="SummativeServlet" >

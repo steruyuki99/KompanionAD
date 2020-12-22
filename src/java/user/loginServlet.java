@@ -77,14 +77,14 @@ public class loginServlet extends HttpServlet {
 
                     HttpSession session = request.getSession(true);
                     session.setAttribute("username", usern);
-                    response.sendRedirect("material/1.1.1.jsp");
+                    response.sendRedirect("index.jsp");
                     
                 }
             }
             // PrintWriter out = response.getWriter();
             //out.println("Sorry unable to log in ");
             request.setAttribute("errorMessage", "Invalid user or password");
-            request.getRequestDispatcher("/index.jsp").forward(request, response);
+            request.getRequestDispatcher("/loginpage.jsp").forward(request, response);
 
         } catch (Exception e2) {
 
