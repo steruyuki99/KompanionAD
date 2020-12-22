@@ -69,6 +69,7 @@ body {
   padding: auto;
   list-style: none;
 }
+
 #menu a {
   background: dodgerblue;
   border-bottom: 1px solid dodgerblue;
@@ -79,6 +80,7 @@ body {
   text-decoration: none;
   font-weight: normal;
 }
+
 #menu a:hover {
   background: #2580a2 left center no-repeat;
   color: #fff;
@@ -184,7 +186,6 @@ content h2{
   font-size: 15px;
   line-height: 25px;
   border-radius: 4px;
-  
   width: 20ex;
 }
 

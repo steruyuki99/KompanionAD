@@ -34,6 +34,30 @@ public class Answer {
         
     }
     
+    public void setBoolAns1(Boolean a){
+        this.ans1 = a;
+    }
+    
+    public void setBoolAns2(Boolean a){
+        this.ans2 = a;
+    }
+    
+    public void setBoolAns3(Boolean a){
+        this.ans3 = a;
+    }
+    
+    public void setBoolAns4(Boolean a){
+        this.ans4 = a;
+    }
+    
+    public void setBoolAns5(Boolean a){
+        this.ans5 = a;
+    }
+    
+    public void setBoolAns6(Boolean a){
+        this.ans6 = a;
+    }
+    
     public void setAnswer1 (String a){
         this.answer1 = a;
     }
@@ -176,6 +200,43 @@ public class Answer {
         return score;
     }
     
-    
+    public ArrayList<Boolean> getAnswerBoolean(String user) throws SQLException{
+        
+        ArrayList<Boolean> answerBool = new ArrayList();
+        
+        String driver = "com.mysql.jdbc.Driver";
+        String dbName = "webapplicationad";
+        String url = "jdbc:mysql://localhost/" + dbName + "?";
+        String userName = "root";
+        String password = "";
+        
+        jdbcUtility = new JDBCUtility(driver,url,userName,password);
+        jdbcUtility.jdbcConnect();
+        con = jdbcUtility.jdbcGetConnection();
+        
+        try (Statement stmt = con.createStatement()) {
+            String sql = "SELECT ans1, ans2, ans3, ans4, ans5, ans6 FROM summative WHERE username='" + user + "'";
+            ResultSet rs = stmt.executeQuery(sql);
+            
+            while(rs.next()){
+                this.answer1 = rs.getString("ans1");
+                this.answer2 = rs.getString("ans2");
+                this.answer3 = rs.getString("ans3");
+                this.answer4 = rs.getString("ans4");
+                this.answer5 = rs.getString("ans5");
+                this.answer6 = rs.getString("ans6");
+            }
+            
+            answerBool.add(this.ans1 = this.answer1.equals("A"));
+            answerBool.add(this.ans2 = this.answer2.equals("B"));
+            answerBool.add(this.ans3 = this.answer3.equals("C"));
+            answerBool.add(this.ans4 = this.answer4.equals("D"));
+            answerBool.add(this.ans5 = this.answer5.equals("A"));
+            answerBool.add(this.ans6 = this.answer6.equals("B"));
+            
+        }
+        
+        return answerBool;
+    }
         
 }
