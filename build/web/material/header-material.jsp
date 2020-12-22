@@ -25,11 +25,11 @@
         <%if(session.getAttribute("username") !=null) {%>
 
     <div class="header">
-        <a href="../index.jsp" width="132" height="31"><img src="../src/img/cd2.png" ></a>
+        <a href="../index.jsp"><img src="../src/img/cd2.png" width="132" height="31"></a>
         <div class="header-right">
             <a href="../material_index.jsp">View Material</a>
             <a href="../SummativeQuestion.jsp">Summative</a>
-            <a href="../FormativeQuestion1.jsp">Formative</a>
+            <a href="../FormativeMenu.jsp">Formative</a>
             <a href="../View-Performance.jsp">View Performance</a>
             <a href="../">Manage Profile</a>
             <a class="active" href="<%=request.getContextPath()%>/logoutServlet">Logout</a>
@@ -39,7 +39,7 @@
     <%} else{%>
 
     <div class="header">
-        <img src="../src/img/cd2.png">
+        <a href="../index.jsp"><img src="../src/img/cd2.png">
         <div class="header-right">
             <a href="material_index.jsp">View Material</a>
             <a class="active" href="../loginpage.jsp">Login</a>

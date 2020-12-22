@@ -84,7 +84,7 @@ public class loginServlet extends HttpServlet {
             // PrintWriter out = response.getWriter();
             //out.println("Sorry unable to log in ");
             request.setAttribute("errorMessage", "Invalid user or password");
-            request.getRequestDispatcher("/loginpage.jsp").forward(request, response);
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
 
         } catch (Exception e2) {
 
