@@ -5,7 +5,6 @@
 --%>
 
 <%@ include file = "header.jsp" %>
-<%@ include file = "navFormative.jsp" %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,152 +26,169 @@
      }
 %>
 <body>
-
-    <!--Nav Body-->
-
-    <!--    <div class="container">
-            <div class="sidebar">
-                <div class="sidebar__item">
-                    <h5 class="active">Questions</h5>
-                    <div class="box" >
-                        <div class="box_cont">
-                            <div class="qNum">
-                                <div class="qNumD"><a href="#q1"> 1 </a> </div>
-                            </div>
-                            <div class="qNum">
-                                <div class="qNumD"><a href="#q2"> 2 </a></div>
-                            </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar__item">
+                <h5 class="active">Questions</h5>
+                <div class="box" >
+                    <div class="box_cont" style="margin-left: 15px; width: 250px;">
+                        <div class="qNum">
+                            <div class="qNumD"><a href="FormativeQuestion1.jsp"> 1 </a> </div>
                         </div>
-                        <div class="box_cont">
-                            <div class="qNum">
-                                <div class="qNumD"> <a href="#q3"> 3 </a></div>
-                            </div>
+                    </div>
+                    <div class="box_cont" style="margin-left: 15px; width: 250px;">
+                        <div class="qNum">
+                            <div class="qNumD"><a href="FormativeQuestion2.jsp"> 2 </a></div>
+                        </div>
+                    </div>
+                    <div class="box_cont" style="margin-left: 15px; width: 250px;">
+                        <div class="qNum">
+                            <div class="qNumD"> <a href="FormativeQuestion3.jsp"> 3 </a></div>
+                        </div>
+                    </div>
+                    <div class="box_cont" style="margin-left: 15px; width: 250px;">
+                        <div class="qNum">
+                            <div class="qNumD"> <a href="FormativeQuestion4.jsp"> 4 </a></div>
+                        </div>
+                    </div>
+                    <div class="box_cont" style="margin-left: 15px; width: 250px;">
+                        <div class="qNum">
+                            <div class="qNumD"> <a href="FormativeQuestion5.jsp"> 5 </a></div>
+                        </div>
+                    </div>
+                    <div class="box_cont" style="margin-left: 15px; width: 250px;">
+                        <div class="qNum">
+                            <div class="qNumD"> <a href="FormativeQuestion6.jsp"> 6 </a></div>
+                        </div>
+                    </div>
+                    <div class="box_cont" style="margin-left: 15px; width: 250px;">
+                        <div class="qNum">
+                            <div class="qNumD"> <a href="FormativeQuestion7.jsp"> 7 </a></div>
                         </div>
                     </div>
                 </div>
-            </div>-->
+            </div>
+        </div>
+        <main class="main">
+            <h1><a>Formative Question 1.2</a></h1>
+            <form method="POST" action="FormativeServlet" >
+                <input type="hidden" name="Formative" value="B">
+                <div class="question_card">
+                    <div class="question"><a id="q1" class="anchor">1) Yang manakah <b>bukan</b> penyebab kepada ralat larian masa</a></div>
 
-    <!--        main-->
-
-    <main class="main">
-        <h1><a>Formative Question 1.2</a></h1>
-        <form method="POST" action="SummativeServlet" >
-            <div class="question_card">
-                <div class="question"><a id="q1" class="anchor">1) Yang manakah <b>bukan</b> teknik pemikiran komputasional</a></div>
-
-                <div class="answer">
-                    <ul class="ansList">
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan1" value="A">
-                                Algoritma
-                            </label>
-                        </li>
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan1" value="B">
-                                Peniskalaan
-                            </label>
-                        </li>
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan1" value="C">
-                                Pengecaman Corak
-                            </label>
-                        </li>
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan1" value="D">
-                                Pengiraan
-                            </label>
-                        </li>
-                    </ul>
+                    <div class="answer">
+                        <ul class="ansList">
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan1" value="A">
+                                    A) Pembahagian dengan sifar
+                                </label>
+                            </li>
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan1" value="B">
+                                    B) Pemboleh ubah tidak mengandungi nilai atau objek
+                                </label>
+                            </li>
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan1" value="C">
+                                    C) Fungssi-fungsi tidak lengkap<!--Correct-->
+                                </label>
+                            </li>
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan1" value="D">
+                                    D) Struktur kawalan urutan yang tidak betul
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question_card">
-                <div class="question"><a id="q2" class="anchor">2) Susun langkah-langkah proses 
-                        penyelasaian masalah berikut mengikut turutan yang betul:<br>
-                        <br>&nbsp; I &nbsp;&nbsp; Jana Idea
-                        <br>&nbsp; II &nbsp;&nbsp;Tentukan Masalah
-                        <br>&nbsp; III &nbsp;Jana Penyelesaian
-                        <br>&nbsp; IV &nbsp;&nbsp;Kumpulkan dan Analisis Data</a></div>
+                <div class="question_card">
+                            <div class="question"><a id="q2" class="anchor">
+                                    2)<br><br>
+                                    int x = 10;<br>
+                                    int y = 3;<br>
+                                    x = y + x;<br><br>
+                                    Berapakah nilai x ?
+                            </a></div>
 
-                <div class="answer">
-                    <ul class="ansList">
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan2" value="A">
-                                I, II, III, IV
-                            </label>
-                        </li>
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan2" value="B">
-                                IV, II, III, I
-                            </label>
-                        </li>
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan2" value="C">
-                                IV, II, I, III
-                            </label>
-                        </li>
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan2" value="D">
-                                III, IV, II, I
-                            </label>
-                        </li>
-                    </ul>
+                    <div class="answer">
+                        <ul class="ansList">
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan2" value="A">
+                                    A) 13<!--Correct-->
+                                </label>
+                            </li>
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan2" value="B">
+                                    B) 10
+                                </label>
+                            </li>
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan2" value="C">
+                                    C) 16
+                                </label>
+                            </li>
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan2" value="D">
+                                    D) 7
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="question_card">
-                <div class="question"><a id="q3" class="anchor">3) Yang manakah penyataan yang tepat
-                        mengenai teknik dalam penyelesaian
-                        masalah?
-                        <br>&nbsp; I &nbsp;&nbsp; Teknik Leraian
-                        <br>&nbsp; II &nbsp;&nbsp;Pengecaman corak
-                        <br>&nbsp; III &nbsp;Peniskalaan
-                        <br>&nbsp; IV &nbsp;&nbsp;Algoritma?</a></div>
+                <div class="question_card">
+                    <div class="question"><a id="q3" class="anchor">3) Susun langkah-langkah pseudokod mengikut turutan yang betul<br>
+                            1. Papar "Hello " + nama<br>
+                            2. Mula<br>
+                            3. Tamat<br>
+                            4. Input nama
+                    </a></div>
 
-                <div class="answer">
-                    <ul class="ansList">
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan3" value="A">
-                                a) I dan II
-                            </label>
-                        </li>
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan3" value="B">
-                                b) I, II dan III
-                            </label>
-                        </li>
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan3" value="C">
-                                c) II, III dan IV
-                            </label>
-                        </li>
-                        <li class="list_item">
-                            <label class="label--checkbox">
-                                <input type="radio" class="radio" name="jawapan3" value="D">
-                                d) Semua di atas
-                            </label>
-                        </li>
-                    </ul>
+                    <div class="answer">
+                        <ul class="ansList">
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan3" value="A">
+                                    A) 1,2,3,4
+                                </label>
+                            </li>
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan3" value="B">
+                                    B) 2,4,1,3<!--Correct-->
+                                </label>
+                            </li>
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan3" value="C">
+                                    C) 4,3,2,1
+                                </label>
+                            </li>
+                            <li class="list_item">
+                                <label class="label--checkbox">
+                                    <input type="radio" class="radio" name="jawapan3" value="D">
+                                    D) 3,1,4,2
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="submit" style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
-                <input type="submit" value="Submit" class="button">
-            </div>
-        </form>
-    </main>
-</div>
+                <div class="submit" style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
+                    <input type="submit" value="Submit" class="button">
+                </div>
+            </form>
+        </main>
+    </div>
 
 </body>
 

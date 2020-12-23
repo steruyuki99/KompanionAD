@@ -35,6 +35,10 @@
                 <a href="FormativeQuestion1.jsp" class="button">Formative Question 1</a>
                 <a href="FormativeQuestion2.jsp" class="button">Formative Question 2</a>
                 <a href="FormativeQuestion3.jsp" class="button">Formative Question 3</a>
+                <a href="FormativeQuestion4.jsp" class="button">Formative Question 4</a>
+                <a href="FormativeQuestion5.jsp" class="button">Formative Question 5</a>
+                <a href="FormativeQuestion6.jsp" class="button">Formative Question 6</a>
+                <a href="FormativeQuestion7.jsp" class="button">Formative Question 7</a>
 
             </div>
         </div>

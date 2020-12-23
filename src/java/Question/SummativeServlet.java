@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 import javax.servlet.http.HttpSession;
 import jdbc.JDBCUtility;
+import Question.Answer;
 
 /**
  *
@@ -58,32 +59,28 @@ public class SummativeServlet extends HttpServlet {
         
         HttpSession session = request.getSession(true);
         String username = (String) session.getAttribute("username");
+//        String a1 = request.getParameter("jawapan1");
+//        String a2 = request.getParameter("jawapan2");
+//        String a3 = request.getParameter("jawapan3");
+//        String a4 = request.getParameter("jawapan4");
+//        String a5 = request.getParameter("jawapan5");
+//        String a6 = request.getParameter("jawapan6");
+        
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            try {
-                
-                String sqlInsert = "INSERT INTO summative(username, ans1, ans2, ans3, ans4, ans5, ans6) VALUES(?,?,?,?,?,?,?)";
-                try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
-                    as.setString(1, username);
-                    as.setString(2, request.getParameter("jawapan1"));
-                    as.setString(3, request.getParameter("jawapan2"));
-                    as.setString(4, request.getParameter("jawapan3"));
-                    as.setString(5, request.getParameter("jawapan4"));
-                    as.setString(6, request.getParameter("jawapan5"));
-                    as.setString(7, request.getParameter("jawapan6"));
-                    
-                    as.executeUpdate();
-                }
-                con.close();
-                
-            } catch (SQLException ex) {
-                
-            }
-            
-            request.setAttribute("successMessage", "Successfully Registered");
-            request.getRequestDispatcher("/AnsSummative.jsp").forward(request, response);
+        Answer a = new Answer();
+        a.setAnswerDB(username,
+                        request.getParameter("jawapan1"),
+                        request.getParameter("jawapan2"),
+                        request.getParameter("jawapan3"),
+                        request.getParameter("jawapan4"),
+                        request.getParameter("jawapan5"),
+                        request.getParameter("jawapan6"));
+
+        request.setAttribute("successMessage", "Successfully Registered");
+        request.getRequestDispatcher("/AnsSummative.jsp").forward(request, response);
             
         }
     }

@@ -9298,4 +9298,49 @@ a {
 .container .sidebar .sidebar__item .box .box_cont .qNum .qNumD:hover a {
   color: #2580a2;
 }
+
+/* fNum */
+.container .sidebar .sidebar__item .box .box_cont .fNum .qNumD {
+  border-radius: 10px;
+  border: #fafafa 1px solid;
+  border-radius: 10px;
+}
+
+.container .sidebar .sidebar__item .box .box_cont .fNum .qNumD a {
+  font-size: 20px;
+  background: transparent;
+  color: white;
+  display: block;
+  margin: auto;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: normal;
+  align-items: center;
+}
+
+.container .sidebar .sidebar__item .box .box_cont .fNum .qNumD:hover {
+  background-color: white;
+}
+
+.container .sidebar .sidebar__item .box .box_cont .fNum .qNumD:hover a {
+  color: #2580a2;
+}
+
+.pv2, .container .sidebar .sidebar__item .box .box_cont .fNum .qNumD {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.fl, .container .sidebar .sidebar__item .box .box_cont .fNum {
+  float: left;
+  _display: inline;
+}
+
+.w-50, .container .sidebar .sidebar__item .box .box_cont .fNum {
+  width: 50%;
+}
+
+.pa1, .container .sidebar .sidebar__item .box .box_cont .fNum {
+  padding: 0.25rem;
+}
 /*# sourceMappingURL=question.css.map */

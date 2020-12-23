@@ -11,7 +11,7 @@
     <link href="src/css/question.css" rel="stylesheet">
     <link href="src/css/material.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="src/js/script.js"></script>
+    <script type="text/javascript" src="../src/js/script.js"></script>
     <link rel="stylesheet" type="text/css"
           href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -70,36 +70,46 @@
             </div>
         </div>
         <main class="main">
-            <h1><a>Formative Question 1</a></h1>
+            <h1><a>Formative Question 4</a></h1>
             <form method="POST" action="FormativeServlet" >
-                <input type="hidden" name="Formative" value="A">
+                <input type="hidden" name="Formative" value="D">
                 <div class="question_card">
-                    <div class="question"><a id="q1" class="anchor">1) Yang manakah <b>bukan</b> teknik pemikiran komputasional</a></div>
+                    <div class="question"><a id="q1" class="anchor">
+                            1)<br><br>
+                            int markah = 84;<br><br>
+                            if(markah>79)<br>
+                            <span style="padding-left:2em">System.out.println("A");<br></span>
+                            else if(markah<80 && markah>59)<br>
+                            <span style="padding-left:2em">System.out.println("B");<br></span>
+                            else<br>
+                            <span style="padding-left:2em">System.out.println("C");<br><br></span>
+                            Apakah output yang dihasilkan ?
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan1" value="A">
-                                    A) Algoritma
+                                    A) A<!--Correct-->
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan1" value="B">
-                                    B) Peniskalaan
+                                    B) B
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan1" value="C">
-                                    C) Pengecaman Corak
+                                    C) C
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan1" value="D">
-                                    D) Pengiraan <!--Correct-->
+                                    D) 84
                                 </label>
                             </li>
                         </ul>
@@ -107,37 +117,40 @@
                 </div>
 
                 <div class="question_card">
-                    <div class="question"><a id="q2" class="anchor">2) Susun langkah-langkah proses 
-                            penyelasaian masalah berikut mengikut turutan yang betul:<br>
-                            <br>&nbsp; I &nbsp;&nbsp; Jana Idea
-                            <br>&nbsp; II &nbsp;&nbsp;Tentukan Masalah
-                            <br>&nbsp; III &nbsp;Jana Penyelesaian
-                            <br>&nbsp; IV &nbsp;&nbsp;Kumpulkan dan Analisis Data</a></div>
+                    <div class="question"><a id="q2" class="anchor">
+                            2)<br><br>
+                            int num = 30;<br><br>
+                            for(int a=0; a<5; a++){<br>
+                            <span style="padding-left:2em">num+2;</span><br>
+                            }<br><br>
+                            System.out.println(num);<br><br>
+                            Apakah nilai num ?
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan2" value="A">
-                                    A) I, II, III, IV
+                                    A) 32
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan2" value="B">
-                                    B) IV, II, III, I
+                                    B) 39
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan2" value="C">
-                                    C) IV, II, I, III <!--Correct-->
+                                    C) 35
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan2" value="D">
-                                    D) III, IV, II, I
+                                    D) 40<!--Correct-->
                                 </label>
                             </li>
                         </ul>
@@ -145,38 +158,41 @@
                 </div>
 
                 <div class="question_card">
-                    <div class="question"><a id="q3" class="anchor">3) Yang manakah penyataan yang tepat
-                            mengenai teknik dalam penyelesaian
-                            masalah?
-                            <br>&nbsp; I &nbsp;&nbsp; Teknik Leraian
-                            <br>&nbsp; II &nbsp;&nbsp;Pengecaman corak
-                            <br>&nbsp; III &nbsp;Peniskalaan
-                            <br>&nbsp; IV &nbsp;&nbsp;Algoritma</a></div>
+                    <div class="question"><a id="q3" class="anchor">
+                            3)<br><br>
+                            int num = 1;<br><br>
+                            do{<br>
+                            <span style="padding-left:2em">num*9;</span><br>
+                            <span style="padding-left:2em">num = num + 1;</span><br>
+                            }<br>
+                            while(num <= 12);<br><br>
+                            System.out.println(num);
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan3" value="A">
-                                    A) I dan II
+                                    A) 90
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan3" value="B">
-                                    B) I, II dan III
+                                    B) 99
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan3" value="C">
-                                    C) II, III dan IV
+                                    C) 100
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan3" value="D">
-                                    D) Semua di atas<!--Correct-->
+                                    D) 108<!--Correct-->
                                 </label>
                             </li>
                         </ul>

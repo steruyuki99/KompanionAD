@@ -153,7 +153,7 @@
                             <br>&nbsp; I &nbsp;&nbsp; Teknik Leraian
                             <br>&nbsp; II &nbsp;&nbsp;Pengecaman corak
                             <br>&nbsp; III &nbsp;Peniskalaan
-                            <br>&nbsp; IV &nbsp;&nbsp;Algoritma?</a></div>
+                            <br>&nbsp; IV &nbsp;&nbsp;Algoritma</a></div>
 
                     <div class="answer">
                         <ul class="ansList">

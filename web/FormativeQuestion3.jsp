@@ -4,14 +4,14 @@
     Author     : dzilh
 --%>
 
-<%@ include file = "header.jsp" %>
+<%@ include file = "header.jsp" %>>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="src/css/question.css" rel="stylesheet">
     <link href="src/css/material.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="src/js/script.js"></script>
+    <script type="text/javascript" src="../src/js/script.js"></script>
     <link rel="stylesheet" type="text/css"
           href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -70,36 +70,36 @@
             </div>
         </div>
         <main class="main">
-            <h1><a>Formative Question 1</a></h1>
-            <form method="POST" action="FormativeServlet" >
-                <input type="hidden" name="Formative" value="A">
+            <h1><a>Formative Question 3</a></h1>
+            <form method="POST" action="FormativeServlet">
+                <input type="hidden" name="Formative" value="C">
                 <div class="question_card">
-                    <div class="question"><a id="q1" class="anchor">1) Yang manakah <b>bukan</b> teknik pemikiran komputasional</a></div>
+                    <div class="question"><a id="q1" class="anchor">1) Yang manakah <b>bukan</b> jenis data</a></div>
 
                     <div class="answer">
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan1" value="A">
-                                    A) Algoritma
+                                   A)  null<!--Correct-->
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan1" value="B">
-                                    B) Peniskalaan
+                                    B) String
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan1" value="C">
-                                    C) Pengecaman Corak
+                                    C) Boolean
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan1" value="D">
-                                    D) Pengiraan <!--Correct-->
+                                    D) Integer
                                 </label>
                             </li>
                         </ul>
@@ -107,37 +107,34 @@
                 </div>
 
                 <div class="question_card">
-                    <div class="question"><a id="q2" class="anchor">2) Susun langkah-langkah proses 
-                            penyelasaian masalah berikut mengikut turutan yang betul:<br>
-                            <br>&nbsp; I &nbsp;&nbsp; Jana Idea
-                            <br>&nbsp; II &nbsp;&nbsp;Tentukan Masalah
-                            <br>&nbsp; III &nbsp;Jana Penyelesaian
-                            <br>&nbsp; IV &nbsp;&nbsp;Kumpulkan dan Analisis Data</a></div>
+                    <div class="question"><a id="q2" class="anchor">
+                            2) Yang manakah adalah pengisytiharan bagi jenis data nombor nyata
+                        </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan2" value="A">
-                                    A) I, II, III, IV
+                                    A) float<!--Correct-->
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan2" value="B">
-                                    B) IV, II, III, I
+                                    B) int
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan2" value="C">
-                                    C) IV, II, I, III <!--Correct-->
+                                    C) String
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan2" value="D">
-                                    D) III, IV, II, I
+                                    D) char
                                 </label>
                             </li>
                         </ul>
@@ -145,38 +142,33 @@
                 </div>
 
                 <div class="question_card">
-                    <div class="question"><a id="q3" class="anchor">3) Yang manakah penyataan yang tepat
-                            mengenai teknik dalam penyelesaian
-                            masalah?
-                            <br>&nbsp; I &nbsp;&nbsp; Teknik Leraian
-                            <br>&nbsp; II &nbsp;&nbsp;Pengecaman corak
-                            <br>&nbsp; III &nbsp;Peniskalaan
-                            <br>&nbsp; IV &nbsp;&nbsp;Algoritma</a></div>
+                    <div class="question"><a id="q3" class="anchor">3) (*) Operasi apakah yang menggunakan simbol ini ? 
+                        </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan3" value="A">
-                                    A) I dan II
+                                    A) Operasi tambah
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan3" value="B">
-                                    B) I, II dan III
+                                    B) Operasi tolak
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan3" value="C">
-                                    C) II, III dan IV
+                                    C) Operasi Darab<!--Correct-->
                                 </label>
                             </li>
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan3" value="D">
-                                    D) Semua di atas<!--Correct-->
+                                    D) Operasi Bahagi
                                 </label>
                             </li>
                         </ul>

@@ -8,31 +8,20 @@ package Question;
 import java.sql.*;
 import java.util.ArrayList;
 import jdbc.JDBCUtility;
-
 /**
  *
- * @author Asus
+ * @author dzilh
  */
-public class Answer {
+public class FQ4 {
     private String username;
     private JDBCUtility jdbcUtility;
     private Connection con;
     private boolean ans1;
     private boolean ans2;
     private boolean ans3;
-    private boolean ans4;
-    private boolean ans5;
-    private boolean ans6;
     private String answer1;
     private String answer2;
     private String answer3;
-    private String answer4;
-    private String answer5;
-    private String answer6;
-    
-    public Answer(){
-        
-    }
     
     public void setBoolAns1(Boolean a){
         this.ans1 = a;
@@ -46,18 +35,6 @@ public class Answer {
         this.ans3 = a;
     }
     
-    public void setBoolAns4(Boolean a){
-        this.ans4 = a;
-    }
-    
-    public void setBoolAns5(Boolean a){
-        this.ans5 = a;
-    }
-    
-    public void setBoolAns6(Boolean a){
-        this.ans6 = a;
-    }
-    
     public void setAnswer1 (String a){
         this.answer1 = a;
     }
@@ -68,18 +45,6 @@ public class Answer {
     
     public void setAnswer3 (String a){
         this.answer3 = a;
-    }
-    
-    public void setAnswer4 (String a){
-        this.answer4 = a;
-    }
-    
-    public void setAnswer5 (String a){
-        this.answer5 = a;
-    }
-    
-    public void setAnswer6 (String a){
-        this.answer6 = a;
     }
     
     public void setUsername (String user){
@@ -98,18 +63,6 @@ public class Answer {
         return answer3;
     }
     
-    public String getAnswer4(){
-        return answer4;
-    }
-    
-    public String getAnswer5(){
-        return answer5;
-    }
-    
-    public String getAnswer6(){
-        return answer6;
-    }
-    
     public ArrayList<String> getAnswerRecords(String user) throws SQLException{
         
         String driver = "com.mysql.jdbc.Driver";
@@ -125,16 +78,13 @@ public class Answer {
         ArrayList<String> answerList = new ArrayList();
         
         try (Statement stmt = con.createStatement()) {
-            String sql = "SELECT ans1, ans2, ans3, ans4, ans5, ans6 FROM summative WHERE username='" + user + "'";
+            String sql = "SELECT ans1, ans2, ans3 FROM formativefour WHERE username='" + user + "'";
             ResultSet rs = stmt.executeQuery(sql);
             
             while (rs.next()){
                 answerList.add(rs.getString("ans1"));
                 answerList.add(rs.getString("ans2"));
                 answerList.add(rs.getString("ans3"));
-                answerList.add(rs.getString("ans4"));
-                answerList.add(rs.getString("ans5"));
-                answerList.add(rs.getString("ans6"));
             }
         }
         con.close();
@@ -157,40 +107,24 @@ public class Answer {
         con = jdbcUtility.jdbcGetConnection();
         
         try (Statement stmt = con.createStatement()) {
-            String sql = "SELECT ans1, ans2, ans3, ans4, ans5, ans6 FROM summative WHERE username='" + user + "'";
+            String sql = "SELECT ans1, ans2, ans3 FROM formativefour WHERE username='" + user + "'";
             ResultSet rs = stmt.executeQuery(sql);
             
             while(rs.next()){
                 this.answer1 = rs.getString("ans1");
                 this.answer2 = rs.getString("ans2");
                 this.answer3 = rs.getString("ans3");
-                this.answer4 = rs.getString("ans4");
-                this.answer5 = rs.getString("ans5");
-                this.answer6 = rs.getString("ans6");
             }
-            
             
             if(this.answer1.equals("A")){
                 score++;
             }
             
-            if(this.answer2.equals("B")){
+            if(this.answer2.equals("D")){
                 score++;
             }
             
-            if(this.answer3.equals("C")){
-                score++;
-            }
-            
-            if(this.answer4.equals("D")){
-                score++;
-            }
-            
-            if(this.answer5.equals("A")){
-                score++;
-            }
-            
-            if(this.answer6.equals("B")){
+            if(this.answer3.equals("D")){
                 score++;
             }
             
@@ -215,31 +149,25 @@ public class Answer {
         con = jdbcUtility.jdbcGetConnection();
         
         try (Statement stmt = con.createStatement()) {
-            String sql = "SELECT ans1, ans2, ans3, ans4, ans5, ans6 FROM summative WHERE username='" + user + "'";
+            String sql = "SELECT ans1, ans2, ans3 FROM formativefour WHERE username='" + user + "'";
             ResultSet rs = stmt.executeQuery(sql);
             
             while(rs.next()){
                 this.answer1 = rs.getString("ans1");
                 this.answer2 = rs.getString("ans2");
                 this.answer3 = rs.getString("ans3");
-                this.answer4 = rs.getString("ans4");
-                this.answer5 = rs.getString("ans5");
-                this.answer6 = rs.getString("ans6");
             }
             
             answerBool.add(this.ans1 = this.answer1.equals("A"));
-            answerBool.add(this.ans2 = this.answer2.equals("B"));
-            answerBool.add(this.ans3 = this.answer3.equals("C"));
-            answerBool.add(this.ans4 = this.answer4.equals("D"));
-            answerBool.add(this.ans5 = this.answer5.equals("A"));
-            answerBool.add(this.ans6 = this.answer6.equals("B"));
+            answerBool.add(this.ans2 = this.answer2.equals("D"));
+            answerBool.add(this.ans3 = this.answer3.equals("D"));
             
         }
         
         return answerBool;
     }
     
-    public void setAnswerDB(String user, String a1, String a2, String a3, String a4, String a5, String a6){
+    public void setAnswerDB(String user, String a1, String a2, String a3){
         String driver = "com.mysql.jdbc.Driver";
         String dbName = "webapplicationad";
         String url = "jdbc:mysql://localhost/" + dbName + "?";
@@ -252,15 +180,12 @@ public class Answer {
         
         try {
                 
-                String sqlInsert = "INSERT INTO summative(username, ans1, ans2, ans3, ans4, ans5, ans6) VALUES(?,?,?,?,?,?,?)";
+                String sqlInsert = "INSERT INTO formativefour(username, ans1, ans2, ans3) VALUES(?,?,?,?)";
                 try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
                     as.setString(1, user);
                     as.setString(2, a1);
                     as.setString(3, a2);
                     as.setString(4, a3);
-                    as.setString(5, a4);
-                    as.setString(6, a5);
-                    as.setString(7, a6);
                     
                     as.executeUpdate();
                 }
@@ -271,7 +196,7 @@ public class Answer {
             }        
     }
     
-    public void updateAnswerDB(String user, String a1, String a2, String a3, String a4, String a5, String a6){
+    public void updateAnswerDB(String user, String a1, String a2, String a3){
         String driver = "com.mysql.jdbc.Driver";
         String dbName = "webapplicationad";
         String url = "jdbc:mysql://localhost/" + dbName + "?";
@@ -284,15 +209,12 @@ public class Answer {
         
         try {
                 
-                String sqlInsert = "UPDATE summative SET ans1=?, ans2=?, ans3=?, ans4=?, ans5=?, ans6=? WHERE username=?";
+                String sqlInsert = "UPDATE formativefour SET ans1=?, ans2=?, ans3=? WHERE username=?";
                 try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
                     
                     as.setString(1, a1);
                     as.setString(2, a2);
                     as.setString(3, a3);
-                    as.setString(4, a4);
-                    as.setString(5, a5);
-                    as.setString(6, a6);
                     as.setString(7, user);
                     
                     as.executeUpdate();
@@ -303,5 +225,4 @@ public class Answer {
                 
             }        
     }
-        
 }
