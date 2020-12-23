@@ -1,15 +1,27 @@
-document.getElementsByClassName('tablinks')[0].click()
-
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+function pageLink1() {
+    link = "profile-page.jsp"
+    location.replace("profile-page.jsp")
 }
+
+function pageLink2() {
+    link = "profile-setting.jsp"
+    location.replace("profile-setting.jsp")
+}
+function confirmSelection(){
+  confirm("Press yes to continue!");
+}
+
+ var check = function() {
+ 
+    if (document.getElementById('password').value ==
+          document.getElementById('confirm_password').value) {
+          document.getElementById('message').style.color = 'green';
+          document.getElementById('message').innerHTML = 'Password Matched';
+    } 
+    else {
+      		document.getElementById('message').style.color = 'red';
+          document.getElementById('message').innerHTML = 'Password Mismatched';
+      }
+  }
+  
+ 

@@ -31,7 +31,7 @@
             <a href="SummativeQuestion.jsp">Summative</a>
             <a href="FormativeMenu.jsp">Formative</a>
             <a href="View-Performance.jsp">View Performance</a>
-            <a href="../">Manage Profile</a>
+            <a href="profile-page.jsp">Manage Profile</a>
             <a class="active" href="<%=request.getContextPath()%>/logoutServlet">Logout</a>
         </div>
     </div>

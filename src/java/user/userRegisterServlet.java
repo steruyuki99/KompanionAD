@@ -37,7 +37,7 @@ public class userRegisterServlet extends HttpServlet {
         String driver = "com.mysql.jdbc.Driver";
 
         String dbName = "webapplicationad";
-        String url = "jdbc:mysql://localhost/" + dbName + "?";
+        String url = "jdbc:mysql://localhost:3306/" + dbName + "?";
         String userName = "root";
         String password = "";
 
@@ -71,12 +71,15 @@ public class userRegisterServlet extends HttpServlet {
         try {
 
             String sqlInsert = "INSERT INTO user( email, username, password) VALUES(?,?,?)";
+  
             PreparedStatement as = con.prepareStatement(sqlInsert);
+      
             as.setString(1, email);
             as.setString(2, username);
             as.setString(3, password);
 
             as.executeUpdate();
+  
         } catch (SQLException ex) {
 
         }
