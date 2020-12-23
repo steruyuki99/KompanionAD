@@ -46,7 +46,7 @@
         <div class="sideblock">
             <div class="sidetab">
                 <div id="AboutMe" class="tabcontent">
-                    <h3>Maklumat Akaun
+                    <h3>Account Settings
                     </h3>
                     <jsp:include page="retrieveUserDetail.jsp"/>
                 </div>
@@ -55,12 +55,12 @@
         </div>
         <div class="mainblock">
             <div class="bar">
-                <button class="tablinks" >Peribadi</button>
-                <button class="tablinks" onclick="pageLink2()">Tetapan</button>
+                <button class="tablinks" >Profile</button>
+                <button class="tablinks" onclick="pageLink2()">Settings</button>
             </div>
             <div class=" tab ">
                 <div id="Personal" class="tabcontent">
-                    <h3>Maklumat Peribadi
+                    <h3>Personal Information
 
                     </h3>
                     <div id="edit" contenteditable="true">

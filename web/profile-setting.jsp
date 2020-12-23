@@ -90,24 +90,24 @@
     <div class="profileblock">
          <div class="mainblock">
             <div class="bar">
-                <button class="tablinks" onclick="pageLink1()">Maklumat Peribadi</button>
-                <button class="tablinks">Tetapan Akaun</button>
+                <button class="tablinks" onclick="pageLink1()">Personal Information</button>
+                <button class="tablinks">Settings</button>
             </div>
              
             <div class="minitab">
-                <button class="tablink" onclick="openTab(event, 'Profile')" >Profil</button>
-                <button class="tablink" onclick="openTab(event, 'Account')">Akaun</button>
-                <button class="tablink" onclick="openTab(event, 'Other')">Lain-Lain</button>
+                <button class="tablink" onclick="openTab(event, 'Profile')" >Profile</button>
+                <button class="tablink" onclick="openTab(event, 'Account')">Account</button>
+                <button class="tablink" onclick="openTab(event, 'Other')">Others</button>
              </div>
 
               <div id="Profile" class="minicontent" style="display:block">
                 
                               <div class="tabcontent" >
-                                  <h3>Sunting Profil</h3>
+                                  <h3>Edit Profile</h3>
                                   <form action="updateFlavorText" method="post">
                                       <div class="col-lg-4">
                                     
-                                            <label for="profil">Tentang Anda : </label>
+                                            <label for="profil">About me: </label>
                                               <textarea name="profileview" rows="10" cols="50"> Congratulations and welcome to the team! We believe that what a strong group of people can accomplish together is much larger, far greater, and will exceed that which an individual can accomplish alone.
                                               </textarea>
                                           <input class="btn btn-success" type="submit" value="Save">
@@ -120,7 +120,7 @@
               <div id="Account" class="minicontent">
                 <div class="tab">
                               <div class="tabcontent">
-                                  <h3>Sunting Akaun</h3>
+                                  <h3>Edit Account</h3>
                                   <form action="UpdateUserData" method="post">
                                       <div class="col-lg-4">
                                           <div class="form-group>">
@@ -144,7 +144,7 @@
               <div id="Other" class="minicontent" >
                 <div class="tab">
                     <div class="tabcontent" >
-                        <h3>Padam Akaun</h3>
+                        <h3>Delete Account</h3>
                         <form action="deleteuser.jsp"  ><div class="col-lg-4">
 
                             <div class="form-group>">

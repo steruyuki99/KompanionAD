@@ -34,6 +34,7 @@
             <h2>Home</h2>
             <a href="material/material_index.jsp" class="button">View Material</a>
             <a href="SummativeQuestion.jsp" class="button">Summative</a>
+            <a href="FormativeMenu.jsp" class="button">Formative</a>
             <a href="View-Performance.jsp" class="button">View Performance</a>
             <a href="profile-page.jsp" class="button">Manage Profile</a>
 
