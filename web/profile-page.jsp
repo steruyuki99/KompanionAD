@@ -74,11 +74,7 @@
         </div>
     </div>
  
-    <div class="footer">
-    <p>
-        This website is under development and maintained by KOMPANION.
-    </p>
-    </div>
+    
     
 </body>
 
