@@ -9,7 +9,9 @@
         <%@page import="javax.servlet.http.HttpSession" %>
         <%@page import="java.sql.*" %>
         <%@page import="jdbc.JDBCUtility" %>
-        
+        <%
+                String username=(String)session.getAttribute("username");
+            %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,17 +103,17 @@
              </div>
 
               <div id="Profile" class="minicontent" style="display:block">
-                
                               <div class="tabcontent" >
                                   <h3>Edit Profile</h3>
-                                  <form action="updateFlavorText" method="post">
+                                  <form method="post" id="usrprofile" action="profileupdate.jsp">
                                       <div class="col-lg-4">
-                                    
-                                            <label for="profil">About me: </label>
-                                              <textarea name="profileview" rows="10" cols="50"> Congratulations and welcome to the team! We believe that what a strong group of people can accomplish together is much larger, far greater, and will exceed that which an individual can accomplish alone.
-                                              </textarea>
-                                          <input class="btn btn-success" type="submit" value="Save">
-                                      </div>
+                                        <label for="profil">About me: </label>
+                                        <input type="hidden" name="username" value="${username}">  
+                                        <textarea rows="4" cols="50" name="personal" form="usrprofile">Ceritakan tentang diri anda.
+                                        
+                                        </textarea><br>
+                                        <input class="btn btn-success" type="submit" value="Submit">
+                                        </div>
                                   </form>
                               </div>
                     
@@ -121,10 +123,10 @@
                 <div class="tab">
                               <div class="tabcontent">
                                   <h3>Edit Account</h3>
-                                  <form action="UpdateUserData" method="post">
+                                  <form action="UpdateUserData.jsp" method="post">
                                       <div class="col-lg-4">
                                           <div class="form-group>">
-                                              <label for="username">Username : </label><input class="form-control" type="text" name="username" placeholder="Username" required><br>
+                                             <input type="hidden" name="username" value="${username}">  
                                               <label for="email">Email : </label><input class="form-control" type="email" name="email" placeholder="Email" required><br>
                                           </div>
                                           <div class="form-group>">

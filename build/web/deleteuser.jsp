@@ -1,52 +1,28 @@
-<%-- 
-    Document   : deleteuser
-    Created on : Dec 23, 2020, 3:12:24 AM
-    Author     : akmal
---%>
+
 <%-- 
     Document   : retrieveUserDetail
     Created on : Dec 18, 2020, 5:23:35 PM
     Author     : akmal
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.*,java.util.*"%>
 <%
-String id = request.getParameter("userid");
-String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://localhost:3306/";
-String database = "webapplicationad";
-String userid = "root";
-String password = "";
-try {
-Class.forName(driver);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
-Connection connection = null;
-Statement statement = null;
-ResultSet resultSet = null;
-%>
-<!DOCTYPE html>
-<html>
-<body>
-<%
-try{
-String username=(String)session.getAttribute("username");
-
+String username=request.getParameter("username");
 out.println(username);
-connection = DriverManager.getConnection(connectionUrl+database, userid, password);
-statement=connection.createStatement();
-String sql ="DELETE * FROM user WHERE username = '"+username+"'";
-resultSet = statement.executeQuery(sql);
-connection.close();
-} catch (Exception e) {
+try
+{
+Class.forName("com.mysql.jdbc.Driver");
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/webapplicationad", "root", "");
+Statement st=conn.createStatement();
+int i=st.executeUpdate("DELETE FROM user WHERE username="+username);
+out.println("Data Deleted Successfully!");
+String redirectURL = "index.jsp";
+response.sendRedirect(redirectURL);
+}
+catch(Exception e)
+{
+System.out.print(e);
 e.printStackTrace();
 }
 %>
-</table>
-</body>
-</html>

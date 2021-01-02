@@ -67,18 +67,24 @@ public class userRegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String personal = "Hello new user";
 
         try {
 
             String sqlInsert = "INSERT INTO user( email, username, password) VALUES(?,?,?)";
-  
+            String sqlInsert2 = "INSERT INTO userprofile(username, personal) VALUES(?,?)";
             PreparedStatement as = con.prepareStatement(sqlInsert);
-      
+            PreparedStatement as2 = con.prepareStatement(sqlInsert2);
+            
             as.setString(1, email);
             as.setString(2, username);
             as.setString(3, password);
+            
+            as2.setString(1, username);
+            as2.setString(2, personal);
 
             as.executeUpdate();
+            as2.executeUpdate();
   
         } catch (SQLException ex) {
 

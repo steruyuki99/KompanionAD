@@ -63,12 +63,9 @@
                     <h3>Personal Information
 
                     </h3>
-                    <div id="edit" contenteditable="true">
-                        "Praesent suscipit fringilla enim et mollis. Phasellus dictum suscipit velit sit amet condimentum. Sed at aliquam nunc, accumsan tincidunt lacus. Phasellus et consectetur turpis, a pellentesque mi. Aenean eu tincidunt magna, eu dapibus neque. Donec fringilla
-                        venenatis vulputate. Integer pharetra urna quis nibh ultrices, eget egestas sapien rhoncus. Aliquam eros nulla, facilisis vel nisl in, tempus scelerisque urna. Duis eget nulla id ante eleifend congue. Mauris eu ornare nisl, sit
-                        amet consectetur turpis. Morbi erat metus, euismod ac sem tincidunt, luctus efficitur dui. Pellentesque at nibh vel magna tincidunt fringilla et ac urna. ""
+                    <div id="edit">
+                        <jsp:include page="personalread.jsp"/>
                     </div>
-                    <input type="button" value="Save" onclick="saveEdits()">
                 </div>
             </div>
         </div>

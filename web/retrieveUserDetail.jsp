@@ -32,7 +32,7 @@ ResultSet resultSet = null;
 try{
 String username=(String)session.getAttribute("username");
 
-out.println(username);
+
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
 String sql ="SELECT username,email FROM user WHERE username = '"+username+"'";
