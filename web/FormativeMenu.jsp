@@ -26,7 +26,6 @@
 
     <body>
 
-
         <!--Nav Body-->
 
         <div class="main_visual">
