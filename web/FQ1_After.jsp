@@ -1,12 +1,12 @@
 <%-- 
-    Document   : Summative_After
-    Created on : Dec 30, 2020, 10:34:57 AM
+    Document   : afterExercise
+    Created on : Dec 23, 2020, 11:11:54 AM
     Author     : dzilh
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ include file = "header.jsp" %>
-<%@page import="Question.Answer" %>
+<%@page import="Question.FQ1" %>
 <%@page import="java.sql.*" %>
 <%@page import="jdbc.JDBCUtility" %>
 
@@ -19,13 +19,13 @@
 <%
     String username=(String)session.getAttribute("username");
     
-    Answer b = new Answer();
+    FQ1 b = new FQ1();
     
     int fq1_score = b.getScore(username);
 %>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +44,7 @@
             <div class="slide-bottom show" style="text-align: center;">
                 <h2>Congratulation</h2>
                 <a>YOUR MARK IS</a>
-                <h1><%=fq1_score%>/3</h1>
+                <h1><%=fq1_score%>/6</h1>
                 <br><br><br><br><br>
                 <a href="ViewPerformanceCheckFQ1.jsp" style="color: blue; text-decoration: underline">See details result here</a>
             </div>

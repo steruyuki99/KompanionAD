@@ -85,7 +85,7 @@ public class FormativeServlet extends HttpServlet {
                     }
 
                     request.setAttribute("successMessage", "Successfully Registered");
-                    request.getRequestDispatcher("/FormativeQuestion1.jsp").forward(request, response);
+                    request.getRequestDispatcher("/FQ1_After.jsp").forward(request, response);
                 }
                 break;
             case "B":

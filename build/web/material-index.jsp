@@ -30,7 +30,7 @@
 
     <div class="main_visual" style="margin-top: 50px;">
         <div class="slide-bottom show">
-            <h2>Home</h2>
+            <h2>Material</h2>
             <a href="material/1.1.1.jsp" class="button">Strategi Penyelesaian Masalah</a>
             <a href="material/1.2.1.jsp" class="button">Algoritma</a>
             <a href="material/1.3.1.jsp" class="button">Pemboleh Ubah, Pemalar dan Jenis Data</a>
