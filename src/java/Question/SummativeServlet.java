@@ -80,7 +80,7 @@ public class SummativeServlet extends HttpServlet {
                         request.getParameter("jawapan6"));
 
         request.setAttribute("successMessage", "Successfully Registered");
-        request.getRequestDispatcher("/AnsSummative.jsp").forward(request, response);
+        request.getRequestDispatcher("/Summative_After.jsp").forward(request, response);
             
         }
     }
