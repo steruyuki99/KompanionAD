@@ -46,7 +46,7 @@
                 <a>YOUR MARK IS</a>
                 <h1><%=fq1_score%>/3</h1>
                 <br><br><br><br><br>
-                <a href="ViewPerformanceCheckFQ1.jsp" style="color: blue; text-decoration: underline">See details result here</a>
+                <a href="ViewPerformanceCheckSummative.jsp" style="color: blue; text-decoration: underline">See details result here</a>
             </div>
         </div>
     </body>
