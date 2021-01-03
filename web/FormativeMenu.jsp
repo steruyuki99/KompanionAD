@@ -31,7 +31,7 @@
 
         <div class="main_visual">
             <div class="slide-bottom show">
-                <h2>Home</h2>
+                <h2>Formative Question</h2>
                 <a href="FormativeQuestion1.jsp" class="button">Formative Question 1</a>
                 <a href="FormativeQuestion2.jsp" class="button">Formative Question 2</a>
                 <a href="FormativeQuestion3.jsp" class="button">Formative Question 3</a>
