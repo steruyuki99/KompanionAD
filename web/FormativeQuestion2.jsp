@@ -70,7 +70,7 @@
             </div>
         </div>
         <main class="main">
-            <h1><a>Formative Question 1.2</a></h1>
+            <h1><a>Formative Question 2</a></h1>
             <form method="POST" action="FormativeServlet" >
                 <input type="hidden" name="Formative" value="B">
                 <div class="question_card">

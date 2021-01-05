@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ include file = "header.jsp" %>
-<%@page import="Question.FQ1" %>
+<%@page import="Question.FQ5" %>
 <%@page import="java.sql.*" %>
 <%@page import="jdbc.JDBCUtility" %>
 
@@ -19,9 +19,9 @@
 <%
     String username=(String)session.getAttribute("username");
     
-    FQ1 b = new FQ1();
+    FQ5 b = new FQ5();
     
-    int fq1_score = b.getScore(username);
+    int fq_score = b.getScore(username);
 %>
 
 <!DOCTYPE html>
@@ -44,9 +44,9 @@
             <div class="slide-bottom show" style="text-align: center;">
                 <h2>Congratulation</h2>
                 <a>YOUR MARK IS</a>
-                <h1><%=fq1_score%>/3</h1>
+                <h1><%=fq_score%>/3</h1>
                 <br><br><br><br><br>
-                <a href="ViewPerformanceCheckFQ1.jsp" style="color: blue; text-decoration: underline">See details result here</a>
+                <a href="ViewPerformanceCheckFQ2.jsp" style="color: blue; text-decoration: underline">See details result here</a>
             </div>
         </div>
     </body>

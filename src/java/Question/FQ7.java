@@ -215,7 +215,7 @@ public class FQ7 {
                     as.setString(1, a1);
                     as.setString(2, a2);
                     as.setString(3, a3);
-                    as.setString(7, user);
+                    as.setString(4, user);
                     
                     as.executeUpdate();
                 }

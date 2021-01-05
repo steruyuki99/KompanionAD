@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import jdbc.JDBCUtility;
-
+import Question.*;
 /**
  *
  * @author dzilh
@@ -67,145 +67,151 @@ public class FormativeServlet extends HttpServlet {
             case "A":
                 try (PrintWriter out = response.getWriter()) {
                     /* TODO output your page here. You may use following sample code. */
-                    try {
+                    try ( /* TODO output your page here. You may use following sample code. */
+                        Statement stmt = con.createStatement()) {
+                        String sqlFind = "SELECT * FROM formativeone WHERE username='" + username + "'";
+                        ResultSet rs = stmt.executeQuery(sqlFind);
+                        
+                        String j1 = request.getParameter("jawapan1");
+                        String j2 = request.getParameter("jawapan2");
+                        String j3 = request.getParameter("jawapan3");
 
-                        String sqlInsert = "INSERT INTO formativeone(username, ans1, ans2, ans3) VALUES(?,?,?,?)";
-                        try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
-                            as.setString(1, username);
-                            as.setString(2, request.getParameter("jawapan1"));
-                            as.setString(3, request.getParameter("jawapan2"));
-                            as.setString(4, request.getParameter("jawapan3"));
-
-                            as.executeUpdate();
+                        FQ1 fq1 = new FQ1();
+                        
+                        if(rs.next()){
+                            fq1.updateAnswerDB(username, j1, j2, j3);
+                        }else {
+                            fq1.setAnswerDB(username, j1, j2, j3);
                         }
-                        con.close();
-
-                    } catch (SQLException ex) {
-
+                        
+                        request.setAttribute("successMessage", "Successfully Registered");
+                        request.getRequestDispatcher("/FQ1_After.jsp").forward(request, response);
                     }
-
-                    request.setAttribute("successMessage", "Successfully Registered");
-                    request.getRequestDispatcher("/FQ1_After.jsp").forward(request, response);
                 }
                 break;
             case "B":
                 try (PrintWriter out = response.getWriter()) {
                     /* TODO output your page here. You may use following sample code. */
-                    try {
+                    try ( /* TODO output your page here. You may use following sample code. */
+                        Statement stmt = con.createStatement()) {
+                        String sqlFind = "SELECT * FROM formativetwo WHERE username='" + username + "'";
+                        ResultSet rs = stmt.executeQuery(sqlFind);
+                        
+                        String j1 = request.getParameter("jawapan1");
+                        String j2 = request.getParameter("jawapan2");
+                        String j3 = request.getParameter("jawapan3");
 
-                        String sqlInsert = "INSERT INTO formativetwo(username, ans1, ans2, ans3) VALUES(?,?,?,?)";
-                        try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
-                            as.setString(1, username);
-                            as.setString(2, request.getParameter("jawapan1"));
-                            as.setString(3, request.getParameter("jawapan2"));
-                            as.setString(4, request.getParameter("jawapan3"));
-
-                            as.executeUpdate();
+                        FQ2 fq2 = new FQ2();
+                        
+                        if(rs.next()){
+                            fq2.updateAnswerDB(username, j1, j2, j3);
+                        }else {
+                            fq2.setAnswerDB(username, j1, j2, j3);
                         }
-                        con.close();
-
-                    } catch (SQLException ex) {
-
+                        
+                        request.setAttribute("successMessage", "Successfully Registered");
+                        request.getRequestDispatcher("/FQ2_After.jsp").forward(request, response);
                     }
-
-                    request.setAttribute("successMessage", "Successfully Registered");
-                    request.getRequestDispatcher("/FormativeQuestion2.jsp").forward(request, response);
                 }
                 break;
             case "C":
                 try (PrintWriter out = response.getWriter()) {
                     /* TODO output your page here. You may use following sample code. */
-                    try {
+                    try ( /* TODO output your page here. You may use following sample code. */
+                        Statement stmt = con.createStatement()) {
+                        String sqlFind = "SELECT * FROM formativethree WHERE username='" + username + "'";
+                        ResultSet rs = stmt.executeQuery(sqlFind);
+                        
+                        String j1 = request.getParameter("jawapan1");
+                        String j2 = request.getParameter("jawapan2");
+                        String j3 = request.getParameter("jawapan3");
 
-                        String sqlInsert = "INSERT INTO formativethree(username, ans1, ans2, ans3) VALUES(?,?,?,?)";
-                        try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
-                            as.setString(1, username);
-                            as.setString(2, request.getParameter("jawapan1"));
-                            as.setString(3, request.getParameter("jawapan2"));
-                            as.setString(4, request.getParameter("jawapan3"));
-
-                            as.executeUpdate();
+                        FQ3 fq3 = new FQ3();
+                        
+                        if(rs.next()){
+                            fq3.updateAnswerDB(username, j1, j2, j3);
+                        }else {
+                            fq3.setAnswerDB(username, j1, j2, j3);
                         }
-                        con.close();
-
-                    } catch (SQLException ex) {
-
+                        
+                        request.setAttribute("successMessage", "Successfully Registered");
+                        request.getRequestDispatcher("/FQ3_After.jsp").forward(request, response);
                     }
-
-                    request.setAttribute("successMessage", "Successfully Registered");
-                    request.getRequestDispatcher("/FormativeQuestion3.jsp").forward(request, response);
                 }
                 break;
             case "D":
                 try (PrintWriter out = response.getWriter()) {
                     /* TODO output your page here. You may use following sample code. */
-                    try {
+                    try ( /* TODO output your page here. You may use following sample code. */
+                        Statement stmt = con.createStatement()) {
+                        String sqlFind = "SELECT * FROM formativefour WHERE username='" + username + "'";
+                        ResultSet rs = stmt.executeQuery(sqlFind);
+                        
+                        String j1 = request.getParameter("jawapan1");
+                        String j2 = request.getParameter("jawapan2");
+                        String j3 = request.getParameter("jawapan3");
 
-                        String sqlInsert = "INSERT INTO formativefour(username, ans1, ans2, ans3) VALUES(?,?,?,?)";
-                        try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
-                            as.setString(1, username);
-                            as.setString(2, request.getParameter("jawapan1"));
-                            as.setString(3, request.getParameter("jawapan2"));
-                            as.setString(4, request.getParameter("jawapan3"));
-
-                            as.executeUpdate();
+                        FQ4 fq4 = new FQ4();
+                        
+                        if(rs.next()){
+                            fq4.updateAnswerDB(username, j1, j2, j3);
+                        }else {
+                            fq4.setAnswerDB(username, j1, j2, j3);
                         }
-                        con.close();
-
-                    } catch (SQLException ex) {
-
+                        
+                        request.setAttribute("successMessage", "Successfully Registered");
+                        request.getRequestDispatcher("/FQ4_After.jsp").forward(request, response);
                     }
-
-                    request.setAttribute("successMessage", "Successfully Registered");
-                    request.getRequestDispatcher("/FormativeQuestion4.jsp").forward(request, response);
                 }
                 break;
             case "E":
                 try (PrintWriter out = response.getWriter()) {
                     /* TODO output your page here. You may use following sample code. */
-                    try {
+                    try ( /* TODO output your page here. You may use following sample code. */
+                        Statement stmt = con.createStatement()) {
+                        String sqlFind = "SELECT * FROM formativefive WHERE username='" + username + "'";
+                        ResultSet rs = stmt.executeQuery(sqlFind);
+                        
+                        String j1 = request.getParameter("jawapan1");
+                        String j2 = request.getParameter("jawapan2");
+                        String j3 = request.getParameter("jawapan3");
 
-                        String sqlInsert = "INSERT INTO formativefive(username, ans1, ans2, ans3) VALUES(?,?,?,?)";
-                        try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
-                            as.setString(1, username);
-                            as.setString(2, request.getParameter("jawapan1"));
-                            as.setString(3, request.getParameter("jawapan2"));
-                            as.setString(4, request.getParameter("jawapan3"));
-
-                            as.executeUpdate();
+                        FQ5 fq5 = new FQ5();
+                        
+                        if(rs.next()){
+                            fq5.updateAnswerDB(username, j1, j2, j3);
+                        }else {
+                            fq5.setAnswerDB(username, j1, j2, j3);
                         }
-                        con.close();
-
-                    } catch (SQLException ex) {
-
+                        
+                        request.setAttribute("successMessage", "Successfully Registered");
+                        request.getRequestDispatcher("/FQ5_After.jsp").forward(request, response);
                     }
-
-                    request.setAttribute("successMessage", "Successfully Registered");
-                    request.getRequestDispatcher("/FormativeQuestion5.jsp").forward(request, response);
                 }
                 break;
             case "F":
                 try (PrintWriter out = response.getWriter()) {
                     /* TODO output your page here. You may use following sample code. */
-                    try {
+                    try ( /* TODO output your page here. You may use following sample code. */
+                        Statement stmt = con.createStatement()) {
+                        String sqlFind = "SELECT * FROM formativesix WHERE username='" + username + "'";
+                        ResultSet rs = stmt.executeQuery(sqlFind);
+                        
+                        String j1 = request.getParameter("jawapan1");
+                        String j2 = request.getParameter("jawapan2");
+                        String j3 = request.getParameter("jawapan3");
 
-                        String sqlInsert = "INSERT INTO formativesix(username, ans1, ans2, ans3) VALUES(?,?,?,?)";
-                        try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
-                            as.setString(1, username);
-                            as.setString(2, request.getParameter("jawapan1"));
-                            as.setString(3, request.getParameter("jawapan2"));
-                            as.setString(4, request.getParameter("jawapan3"));
-
-                            as.executeUpdate();
+                        FQ6 fq6 = new FQ6();
+                        
+                        if(rs.next()){
+                            fq6.updateAnswerDB(username, j1, j2, j3);
+                        }else {
+                            fq6.setAnswerDB(username, j1, j2, j3);
                         }
-                        con.close();
-
-                    } catch (SQLException ex) {
-
+                        
+                        request.setAttribute("successMessage", "Successfully Registered");
+                        request.getRequestDispatcher("/FQ6_After.jsp").forward(request, response);
                     }
-
-                    request.setAttribute("successMessage", "Successfully Registered");
-                    request.getRequestDispatcher("/FormativeQuestion6.jsp").forward(request, response);
                 }
                 break;
             case "G":
@@ -215,56 +221,21 @@ public class FormativeServlet extends HttpServlet {
                         Statement stmt = con.createStatement()) {
                         String sqlFind = "SELECT * FROM formativeseven WHERE username='" + username + "'";
                         ResultSet rs = stmt.executeQuery(sqlFind);
+                        
+                        String j1 = request.getParameter("jawapan1");
+                        String j2 = request.getParameter("jawapan2");
+                        String j3 = request.getParameter("jawapan3");
 
-                        out.println("<h1>" + rs.next() + "</h1>");
+                        FQ7 fq7 = new FQ7();
                         
                         if(rs.next()){
-                            String j1 = request.getParameter("jawapan1");
-                            String j2 = request.getParameter("jawapan2");
-                            String j3 = request.getParameter("jawapan3");
-                            try {
-
-                                String sqlInsert = "UPDATE formativeseven SET ans1=?, ans2= ?, ans3 = ? WHERE username = " + username;
-                                PreparedStatement as = con.prepareStatement(sqlInsert);
-                                    as.setString(1, j1);
-                                    as.setString(2, j2);
-                                    as.setString(3, j3);
-
-                                    as.executeUpdate(); 
-
-                                con.close();
-
-                            } catch (SQLException ex) {
-                                request.setAttribute("error", ex);
-                                out.println(ex);
-                            }
-
-                            request.setAttribute("successMessage", "Successfully Registered");
-                            request.getRequestDispatcher("/FormativeQuestion7.jsp").forward(request, response);
-                            
+                            fq7.updateAnswerDB(username, j1, j2, j3);
                         }else {
-                            
-                            try {
-
-                                String sqlInsert = "INSERT INTO formativeseven(username, ans1, ans2, ans3) VALUES(?,?,?,?)";
-                                try (PreparedStatement as = con.prepareStatement(sqlInsert)) {
-                                    as.setString(1, username);
-                                    as.setString(2, request.getParameter("jawapan1"));
-                                    as.setString(3, request.getParameter("jawapan2"));
-                                    as.setString(4, request.getParameter("jawapan3"));
-
-                                    as.executeUpdate();
-                                }
-                                con.close();
-
-                            } catch (SQLException ex) {
-
-                            }
-
-                            request.setAttribute("successMessage", "Successfully Registered");
-                            request.getRequestDispatcher("/FormativeQuestion7.jsp").forward(request, response);
-                            
+                            fq7.setAnswerDB(username, j1, j2, j3);
                         }
+                        
+                        request.setAttribute("successMessage", "Successfully Registered");
+                        request.getRequestDispatcher("/FQ7_After.jsp").forward(request, response);
                     }
                          
                 }
