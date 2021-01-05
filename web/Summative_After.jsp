@@ -44,7 +44,7 @@
             <div class="slide-bottom show" style="text-align: center;">
                 <h2>Congratulation</h2>
                 <a>YOUR MARK IS</a>
-                <h1><%=fq1_score%>/3</h1>
+                <h1><%=fq1_score%>/6</h1>
                 <br><br><br><br><br>
                 <a href="ViewPerformanceCheckSummative.jsp" style="color: blue; text-decoration: underline">See details result here</a>
             </div>
