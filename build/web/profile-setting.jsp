@@ -148,12 +148,8 @@
                     <div class="tabcontent" >
                         <h3>Delete Account</h3>
                         <form action="deleteuser.jsp"  ><div class="col-lg-4">
-
-                            <div class="form-group>">
-                                <label for="username">Username : </label><input class="form-control" type="text" name="username" placeholder="Enter Username" required><br>
-                            </div>
-                          
-                                <input class="btn btn-success" type="submit" value="Delete">    
+                                 <input type="hidden" name="username" value="${username}">
+                                 <br><input class="btn btn-success" type="submit" value="Delete">    
                             </div>
                         </form>
                     </div>
