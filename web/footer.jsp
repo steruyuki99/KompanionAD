@@ -26,9 +26,9 @@
                 <h3>CodingSchool<span></span></h3>
 
                 <p class="footer-links">
-                    <a href="#">Home</a>
+                    <a href="index.jsp">Home</a>
                     ·
-                    <a href="#">Help</a>
+                    <a href="helpPage.jsp">Help</a>
                 </p>
 
                 <p class="footer-company-name">Kompanion &copy; 2020 </p>
@@ -44,7 +44,7 @@
 
                 <div>
                     <i class="fa fa-envelope"></i>
-                    <p><a href="mailto:support@company.com">contact@kompanion.com</a></p>
+                    <p><a href="mailto:contact@kompanion.com">contact@kompanion.com</a></p>
                 </div>
 
             </div>

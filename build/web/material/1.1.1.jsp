@@ -173,7 +173,7 @@
     
     <footer>
         
-    <%@ include file = "../footer.jsp" %>
+    <%@ include file = "footerMaterial.jsp" %>
     </footer>
 
 </html>

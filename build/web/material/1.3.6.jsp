@@ -9,44 +9,49 @@
 <%@ include file = "../navmenu.jsp" %>
 
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../src/css/material.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <title>1.3.6</title>
-    <script type="text/javascript" src="../src/js/script.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../src/css/material.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <title>1.3.6</title>
+        <script type="text/javascript" src="../src/js/script.js"></script>
+    </head>
+    <body>
 
 
-    <button id="gotopbtn" onclick="goTop()">
-        <i class="material-icons">arrow_upward</i>
-    </button>
+        <button id="gotopbtn" onclick="goTop()">
+            <i class="material-icons">arrow_upward</i>
+        </button>
 
 
-<!--Nav body -->
+        <!--Nav body -->
 
 
-<div id="nav-body">
+        <div id="nav-body">
 
 
 
-    <!--end menu div-->
+            <!--end menu div-->
 
 
-<div id="content-wrapper">
-    <div id="content">
-        <h2>1.3.6 Penulisan Atur Cara untuk Memasukkan Input daripada Papan Kekunci dan Memaparkan Output</h2>
-        <div id="content-image">
-            <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-078.png">
-            <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-079.png">
-            <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-080.png">
+            <div id="content-wrapper">
+                <div id="content">
+                    <h2>1.3.6 Penulisan Atur Cara untuk Memasukkan Input daripada Papan Kekunci dan Memaparkan Output</h2>
+                    <div id="content-image">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-078.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-079.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-080.png">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</div>
-<!--end nav-body div-->
-</body>
+        <!--end nav-body div-->
+    </body>
+
+    <footer>
+
+        <%@ include file = "footerMaterial.jsp" %>
+    </footer>
 </html>

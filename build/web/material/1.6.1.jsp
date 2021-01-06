@@ -9,52 +9,58 @@
 <%@ include file = "../navmenu.jsp" %>
 
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../src/css/material.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <title>CodingSchool Material</title>
-    <script type="text/javascript" src="../src/js/script.js"></script>
-  </head>
-  
-  <body>
-  
-    
-  <!--Header-->
-  
-    <button id="gotopbtn" onclick="goTop()">
-      <i class="material-icons">arrow_upward</i>
-    </button>
-  
-  <!--Nav body -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../src/css/material.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <title>CodingSchool Material</title>
+        <script type="text/javascript" src="../src/js/script.js"></script>
+    </head>
+
+    <body>
 
 
-<div id="nav-body">
+        <!--Header-->
 
-  <!--end menu div-->
+        <button id="gotopbtn" onclick="goTop()">
+            <i class="material-icons">arrow_upward</i>
+        </button>
+
+        <!--Nav body -->
 
 
-    <div id="content-wrapper">
-      <div id="content">
-          <h2>1.6.1 Struktur Data dan Modular</h2>
-          <div id="content-image">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-137.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-138.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-139.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-140.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-141.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-142.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-143.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-144.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-145.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-146.png">
-              <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-147.png">
-          </div>
-      </div>
-    </div>
-</div>
-<!--end nav-body div-->
-</body>
+        <div id="nav-body">
+
+            <!--end menu div-->
+
+
+            <div id="content-wrapper">
+                <div id="content">
+                    <h2>1.6.1 Struktur Data dan Modular</h2>
+                    <div id="content-image">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-137.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-138.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-139.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-140.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-141.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-142.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-143.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-144.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-145.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-146.png">
+                        <img src="../material/material-image/Asas Sains Komputer Tingkatan 4-147.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end nav-body div-->
+    </body>
+
+    <footer>
+
+        <%@ include file = "footerMaterial.jsp" %>
+    </footer>
+
 </html>
