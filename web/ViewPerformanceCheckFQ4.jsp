@@ -87,14 +87,14 @@
                 <div class="pa3 bt b--black-10">
                     <p class="f6 f5-ns lh-copy measure">
                         1)<br><br>
-                            int markah = 84;<br><br>
-                            if(markah>79)<br>
-                            <span style="padding-left:2em">System.out.println("A");<br></span>
-                            else if(markah<80 && markah>59)<br>
-                            <span style="padding-left:2em">System.out.println("B");<br></span>
-                            else<br>
-                            <span style="padding-left:2em">System.out.println("C");<br><br></span>
-                            Apakah output yang dihasilkan ?
+                        int markah = 84;<br><br>
+                        if(markah>79)<br>
+                        <span style="padding-left:2em">System.out.println("A");<br></span>
+                        else if(markah<80 && markah>59)<br>
+                        <span style="padding-left:2em">System.out.println("B");<br></span>
+                        else<br>
+                        <span style="padding-left:2em">System.out.println("C");<br><br></span>
+                        Apakah output yang dihasilkan ?
                     </p>
                     <hr>
                     <p class="f6 f5-ns lh-copy measure">
@@ -114,12 +114,12 @@
                 <div class="pa3 bt b--black-10">
                     <p class="f6 f5-ns lh-copy measure">
                         2)<br><br>
-                            int num = 30;<br><br>
-                            for(int a=0; a<5; a++){<br>
-                            <span style="padding-left:2em">num+2;</span><br>
-                            }<br><br>
-                            System.out.println(num);<br><br>
-                            Apakah nilai num ?
+                        int num = 30;<br><br>
+                        for(int a=0; a<5; a++){<br>
+                        <span style="padding-left:2em">num+2;</span><br>
+                        }<br><br>
+                        System.out.println(num);<br><br>
+                        Apakah nilai num ?
                     </p>
                     <hr>
                     <p class="f6 f5-ns lh-copy measure">
@@ -139,13 +139,13 @@
                 <div class="pa3 bt b--black-10">
                     <p class="f6 f5-ns lh-copy measure">
                         3)<br><br>
-                            int num = 1;<br><br>
-                            do{<br>
-                            <span style="padding-left:2em">num*9;</span><br>
-                            <span style="padding-left:2em">num = num + 1;</span><br>
-                            }<br>
-                            while(num <= 12);<br><br>
-                            System.out.println(num);
+                        int num = 1;<br><br>
+                        do{<br>
+                        <span style="padding-left:2em">num*9;</span><br>
+                        <span style="padding-left:2em">num = num + 1;</span><br>
+                        }<br>
+                        while(num <= 12);<br><br>
+                        System.out.println(num);
                     </p>
                     <hr>
                     <p class="f6 f5-ns lh-copy measure">
@@ -162,5 +162,10 @@
         </div>
 
     </body>
+
+    <footer>
+
+        <%@ include file = "footer.jsp" %>
+    </footer>
 
 </html>

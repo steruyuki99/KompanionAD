@@ -84,7 +84,7 @@
                             else<br>
                             <span style="padding-left:2em">System.out.println("C");<br><br></span>
                             Apakah output yang dihasilkan ?
-                    </a></div>
+                        </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -125,7 +125,7 @@
                             }<br><br>
                             System.out.println(num);<br><br>
                             Apakah nilai num ?
-                    </a></div>
+                        </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -167,7 +167,7 @@
                             }<br>
                             while(num <= 12);<br><br>
                             System.out.println(num);
-                    </a></div>
+                        </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -207,6 +207,11 @@
     </div>
 
 </body>
+
+<footer>
+
+    <%@ include file = "footer.jsp" %>
+</footer>
 
 <script>
     $(function () {

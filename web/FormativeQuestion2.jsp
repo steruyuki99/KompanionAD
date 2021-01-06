@@ -107,13 +107,13 @@
                 </div>
 
                 <div class="question_card">
-                            <div class="question"><a id="q2" class="anchor">
-                                    2)<br><br>
-                                    int x = 10;<br>
-                                    int y = 3;<br>
-                                    x = y + x;<br><br>
-                                    Berapakah nilai x ?
-                            </a></div>
+                    <div class="question"><a id="q2" class="anchor">
+                            2)<br><br>
+                            int x = 10;<br>
+                            int y = 3;<br>
+                            x = y + x;<br><br>
+                            Berapakah nilai x ?
+                        </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -151,7 +151,7 @@
                             2. Mula<br>
                             3. Tamat<br>
                             4. Input nama
-                    </a></div>
+                        </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -191,6 +191,11 @@
     </div>
 
 </body>
+
+<footer>
+
+    <%@ include file = "footer.jsp" %>
+</footer>
 
 <script>
     $(function () {

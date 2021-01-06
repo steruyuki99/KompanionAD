@@ -87,10 +87,10 @@
                 <div class="pa3 bt b--black-10">
                     <p class="f6 f5-ns lh-copy measure">
                         1) Yang manakah penyataan yang betul tentang amalan terbaik pengatucaraan<br>
-                            <br>&nbsp; I &nbsp;&nbsp; Inden yang konsisten
-                            <br>&nbsp; II &nbsp;&nbsp;Jenis Data
-                            <br>&nbsp; III &nbsp;Pemboleh ubah yang bermakna;
-                            <br>&nbsp; IV &nbsp;&nbsp;Komen
+                        <br>&nbsp; I &nbsp;&nbsp; Inden yang konsisten
+                        <br>&nbsp; II &nbsp;&nbsp;Jenis Data
+                        <br>&nbsp; III &nbsp;Pemboleh ubah yang bermakna;
+                        <br>&nbsp; IV &nbsp;&nbsp;Komen
                     </p>
                     <hr>
                     <p class="f6 f5-ns lh-copy measure">
@@ -110,16 +110,16 @@
                 <div class="pa3 bt b--black-10">
                     <p class="f6 f5-ns lh-copy measure">
                         2)<br><br>
-                            public class LuasSegitiga {<br>
-                            <span style="padding-left:2em">public static void main (String[] args){</span><br>
-                            <span style="padding-left:3em">int Tapak = 6;</span><br>
-                            <span style="padding-left:3em">Tinggi = 4;</span><br>
-                            <span style="padding-left:3em">double Luas;</span><br><br>
-                            <span style="padding-left:3em">Luas = (1.0 / 2) * Tapak * Tinggi;</span><br><br>
-                            <span style="padding-left:3em">System.out.println ("Luas Segitiga ialah : " + Luas);</span><br>
-                            <span style="padding-left:2em">}</span><br>
-                            }<br><br>
-                            Apakah ralat yang terdapat dalam atur cara tersebut ?
+                        public class LuasSegitiga {<br>
+                        <span style="padding-left:2em">public static void main (String[] args){</span><br>
+                        <span style="padding-left:3em">int Tapak = 6;</span><br>
+                        <span style="padding-left:3em">Tinggi = 4;</span><br>
+                        <span style="padding-left:3em">double Luas;</span><br><br>
+                        <span style="padding-left:3em">Luas = (1.0 / 2) * Tapak * Tinggi;</span><br><br>
+                        <span style="padding-left:3em">System.out.println ("Luas Segitiga ialah : " + Luas);</span><br>
+                        <span style="padding-left:2em">}</span><br>
+                        }<br><br>
+                        Apakah ralat yang terdapat dalam atur cara tersebut ?
                     </p>
                     <hr>
                     <p class="f6 f5-ns lh-copy measure">
@@ -139,16 +139,16 @@
                 <div class="pa3 bt b--black-10">
                     <p class="f6 f5-ns lh-copy measure">
                         3)<br><br>
-                            public class LuasBulatan {<br>
-                            <span style="padding-left:2em">public static void main(String[]args){</span><br><br>
-                            <span style="padding-left:3em">int jejari = 5</span><br>
-                            <span style="padding-left:3em">double luasBulatan;</span><br>
-                            <span style="padding-left:3em">final double pi= 3.142;</span><br><br>
-                            <span style="padding-left:3em">luasBulatan = pi * jejari;</span><br><br>
-                            <span style="padding-left:3em">System.out.println("Luas bulatan ialah " + luasbulatan);</span><br>
-                            <span style="padding-left:2em">}</span><br>
-                            }<br><br>
-                            Apakah pembetulan yang betul bagi atur cara tersebut ?
+                        public class LuasBulatan {<br>
+                        <span style="padding-left:2em">public static void main(String[]args){</span><br><br>
+                        <span style="padding-left:3em">int jejari = 5</span><br>
+                        <span style="padding-left:3em">double luasBulatan;</span><br>
+                        <span style="padding-left:3em">final double pi= 3.142;</span><br><br>
+                        <span style="padding-left:3em">luasBulatan = pi * jejari;</span><br><br>
+                        <span style="padding-left:3em">System.out.println("Luas bulatan ialah " + luasbulatan);</span><br>
+                        <span style="padding-left:2em">}</span><br>
+                        }<br><br>
+                        Apakah pembetulan yang betul bagi atur cara tersebut ?
                     </p>
                     <hr>
                     <p class="f6 f5-ns lh-copy measure">
@@ -165,5 +165,10 @@
         </div>
 
     </body>
+
+    <footer>
+
+        <%@ include file = "footer.jsp" %>
+    </footer>
 
 </html>

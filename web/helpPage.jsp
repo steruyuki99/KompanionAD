@@ -68,11 +68,18 @@
 
                     <h2>View Performance </h2>
 
-                    <p>You can access your user profile on the page by hover over the manage profile at the top-right of the screen while logged in and then clicking "Manage Profile".
+                    <p>View Performance will help the students to get the real-time data of the answer of their assessments. This will help the 
+                        students to review and identify their answers based on their performance. In CodingSchool, the students must need to log in and answer all the 
+                        assessment first to view their performance. Once, the students have done all the assessments and enter the View Performance page, the page will generate 
+                        the performance of the individual user based on their assessments.
 
-                        Your profile has two sections: Account and Setting. The right section displays the same information on your profile. This includes your username and email.
-                        You can edit your profile in the about me box. You may tell about yourself in there. This is your basic introduction to other users. 
-                        You can edit your account by input your new email and password. You may also delete your account in others section.
+                    <p>
+
+                    <h2>Login and Register </h2>
+
+                    <p>The user can login by clicking the blue Log in button on the top right of the screen. User need to login to do Formative and Subjective question. The user can register 
+                        if they do not have the account yet.
+
                     <p>
 
                 </div>
