@@ -67,11 +67,11 @@
         <header>
             <a href="index.jsp" id="left"><img src="src/img/cd2.png"></a>
             <div>
-                <a href="#">View Material</a>
+                <a href="material/material_index.jsp">View Material</a>
                 <a href="SummativeQuestion.jsp">Summative</a>
-                <a href="#">Formative</a>
+                <a href="FormativeMenu.jsp">Formative</a>
                 <a href="View-Performance.jsp">View Performance</a>
-                <a href="#">Manage Profile</a>
+                <a href="profile-page.jsp">Manage Profile</a>
                 <a href="<%=request.getContextPath()%>/logoutServlet" id="active">Logout</a>
             </div>
         </header>
@@ -88,15 +88,15 @@
         <div class="sidebar">
             <ul>
                 <li><a href="#" class="bt" style="user-select: none;">Formative</a></li>
-                <ul>
-                    <li><a href="ViewPerformanceCheckFQ1.jsp">1. Strategi Penyelesaian Masalah</a></li>
-                    <li><a href="ViewPerformanceCheckFQ2.jsp">2. Algoritma</a></li>
-                    <li><a href="ViewPerformanceCheckFQ3.jsp">3. Pemboleh Ubah, Pemalar dan Jenis Data</a></li>
-                    <li><a href="ViewPerformanceCheckFQ4.jsp">4. Struktur Kawalan</a></li>
-                    <li><a href="ViewPerformanceCheckFQ5.jsp">5. Amalan Terbaik Pengaturcaraan</a></li>
-                    <li><a href="ViewPerformanceCheckFQ6.jsp">6. Struktur Data dan Modular</a></li>
-                    <li><a href="ViewPerformanceCheckFQ7.jsp">7. Pembangunan Aplikasi</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="ViewPerformanceCheckFQ1.jsp">1. Strategi Penyelesaian Masalah</a></li>
+                        <li><a href="ViewPerformanceCheckFQ2.jsp">2. Algoritma</a></li>
+                        <li><a href="ViewPerformanceCheckFQ3.jsp">3. Pemboleh Ubah, Pemalar dan Jenis Data</a></li>
+                        <li><a href="ViewPerformanceCheckFQ4.jsp">4. Struktur Kawalan</a></li>
+                        <li><a href="ViewPerformanceCheckFQ5.jsp">5. Amalan Terbaik Pengaturcaraan</a></li>
+                        <li><a href="ViewPerformanceCheckFQ6.jsp">6. Struktur Data dan Modular</a></li>
+                        <li><a href="ViewPerformanceCheckFQ7.jsp">7. Pembangunan Aplikasi</a></li>
+                    </ul>
                 <li><a href="ViewPerformanceCheckSummative.jsp">Summative</a></li>
             </ul>
         </div>
@@ -118,44 +118,44 @@
                 </tr>
                 <tr>
                     <td style="padding: 5px 5px;">1.1 Strategi Penyelesaian Masalah</td>
-                    <td style="text-align: center;"><%=fq1_score%>/3</td>
-                    <td style="text-align: center;"><a href="#"
+                    <td style="text-align: center;"><% if(fq1_score == 0){%>0<%}else{%><%=fq1_score%><%}%>/3</td>
+                    <td style="text-align: center;"><a href="FormativeQuestion1.jsp"
                                                        style="text-decoration: underline; color: blue;">view</a></td>
                 </tr>
                 <tr>
                     <td style="padding: 5px 5px;">1.2 Algoritma</td>
-                    <td style="text-align: center;"><%=fq2_score%>/3</td>
-                    <td style="text-align: center;"><a href="#"
+                    <td style="text-align: center;"><% if(fq2_score == 0){%>0<%}else{%><%=fq2_score%><%}%>/3</td>
+                    <td style="text-align: center;"><a href="FormativeQuestion2.jsp"
                                                        style="text-decoration: underline; color: blue;">view</a></td>
                 </tr>
                 <tr>
                     <td style="padding: 5px 5px;">1.3 Pemboleh Ubah, Pemalar dan Jenis Data</td>
-                    <td style="text-align: center;"><%=fq3_score%>/3</td>
-                    <td style="text-align: center;"><a href="#"
+                    <td style="text-align: center;"><% if(fq3_score == 0){%>0<%}else{%><%=fq3_score%><%}%>/3</td>
+                    <td style="text-align: center;"><a href="FormativeQuestion3.jsp"
                                                        style="text-decoration: underline; color: blue;">view</a></td>
                 </tr>
                 <tr>
                     <td style="padding: 5px 5px;">1.4 Struktur Kawalan</td>
-                    <td style="text-align: center;"><%=fq4_score%>/3</td>
-                    <td style="text-align: center;"><a href="#"
+                    <td style="text-align: center;"><% if(fq4_score == 0){%>0<%}else{%><%=fq4_score%><%}%>/3</td>
+                    <td style="text-align: center;"><a href="FormativeQuestion4.jsp"
                                                        style="text-decoration: underline; color: blue;">view</a></td>
                 </tr>
                 <tr>
                     <td style="padding: 5px 5px;">1.5 Amalan Terbaik Pengatucaraan</td>
-                    <td style="text-align: center;"><%=fq5_score%>/3</td>
-                    <td style="text-align: center;"><a href="#"
+                    <td style="text-align: center;"><% if(fq5_score == 0){%>0<%}else{%><%=fq5_score%><%}%>/3</td>
+                    <td style="text-align: center;"><a href="FormativeQuestion5.jsp"
                                                        style="text-decoration: underline; color: blue;">view</a></td>
                 </tr>
                 <tr>
                     <td style="padding: 5px 5px;">1.6 Struktur Data dan Modular</td>
-                    <td style="text-align: center;"><%=fq6_score%>/3</td>
-                    <td style="text-align: center;"><a href="#"
+                    <td style="text-align: center;"><% if(fq6_score == 0){%>0<%}else{%><%=fq6_score%><%}%>/3</td>
+                    <td style="text-align: center;"><a href="FormativeQuestion6.jsp"
                                                        style="text-decoration: underline; color: blue;">view</a></td>
                 </tr>
                 <tr>
                     <td style="padding: 5px 5px;">1.7 Pembangunan Aplikasi</td>
-                    <td style="text-align: center;"><%=fq7_score%>/3</td>
-                    <td style="text-align: center;"><a href="#"
+                    <td style="text-align: center;"><% if(fq7_score == 0){%>0<%}else{%><%=fq7_score%><%}%>/3</td>
+                    <td style="text-align: center;"><a href="FormativeQuestion7.jsp"
                                                        style="text-decoration: underline; color: blue;">view</a></td>
                 </tr>
                 <tr>
@@ -172,7 +172,7 @@
                 </tr>
                 <tr>
                     <td style="padding: 5px 5px;">Summative</td>
-                    <td style="text-align: center;"><%=summative_score%>/6</td>
+                    <td style="text-align: center;"><% if(summative_score == 0){%>0<%}else{%><%=summative_score%><%}%>/6</td>
                     <td style="text-align: center;"><a href="ViewPerformanceCheckSummative.jsp"
                                                        style="text-decoration: underline; color: blue;">view</a></td>
                 </tr>

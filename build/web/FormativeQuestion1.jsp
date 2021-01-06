@@ -71,7 +71,7 @@
         </div>
         <main class="main">
             <h1><a>Formative Question 1</a></h1>
-            <form method="POST" action="FormativeServlet" >
+            <form method="POST" action="FormativeServlet">
                 <input type="hidden" name="Formative" value="A">
                 <div class="question_card">
                     <div class="question"><a id="q1" class="anchor">1) Yang manakah <b>bukan</b> teknik pemikiran komputasional</a></div>
