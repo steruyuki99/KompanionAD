@@ -35,6 +35,7 @@ body {
   clear: both;
   float: left;
   overflow-y: hidden;
+  margin-top: 80px;
 }
 
 .dropdown{

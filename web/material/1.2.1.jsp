@@ -180,8 +180,9 @@
 
             </div>
             <!--end nav-body div-->
+        </div>
     </body>
-    <footer>
+        <footer>
 
         <%@ include file = "footerMaterial.jsp" %>
     </footer>
