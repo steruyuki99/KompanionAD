@@ -36,10 +36,10 @@ public class userRegisterServlet extends HttpServlet {
     public void init() throws ServletException {
         String driver = "com.mysql.jdbc.Driver";
 
-        String dbName = "webapplicationad";
-        String url = "jdbc:mysql://localhost:3306/" + dbName + "?";
-        String userName = "root";
-        String password = "";
+        String dbName = "heroku_a8f8953a523fd66";
+        String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/" + dbName + "?reconnect=true";
+        String userName = "bd548560f46fb3";
+        String password = "360fe00c";
 
         jdbcUtility = new JDBCUtility(driver,
                 url,

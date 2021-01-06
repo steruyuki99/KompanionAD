@@ -11,3 +11,5 @@ Project Application Development UTM
 -Database: MySQL
 
 -CSS Framework: Boostrap, Tachyons
+
+heroku war:deploy dist/WebApplicationAD.war --app kompanionad

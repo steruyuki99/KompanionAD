@@ -46,11 +46,11 @@
         <header>
             <a href="index.jsp" id="left"><img src="src/img/cd2.png"></a>
             <div>
-                <a href="#">View Material</a>
+                <a href="material/material_index.jsp">View Material</a>
                 <a href="SummativeQuestion.jsp">Summative</a>
-                <a href="#">Formative</a>
+                <a href="FormativeMenu.jsp">Formative</a>
                 <a href="View-Performance.jsp">View Performance</a>
-                <a href="#">Manage Profile</a>
+                <a href="profile-page.jsp">Manage Profile</a>
                 <a href="<%=request.getContextPath()%>/logoutServlet" id="active">Logout</a>
             </div>
         </header>

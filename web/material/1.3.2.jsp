@@ -48,6 +48,7 @@
                 </div>
             </div>
             <!--end nav-body div-->
+         </div>
     </body>
     <footer>
 

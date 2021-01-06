@@ -3,35 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package user;
+package userprofile;
 
-import bean.user;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.Statement;
-import javax.servlet.RequestDispatcher;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import jdbc.JDBCUtility;
-import java.util.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
 
 /**
  *
- * @author User
+ * @author akmal
  */
-@WebServlet(name = "loginServlet", urlPatterns = {"/loginServlet"})
-public class loginServlet extends HttpServlet {
-
+@WebServlet(name = "updateFlavorText", urlPatterns = {"/updateFlavorText"})
+public class updateFlavorText extends HttpServlet {
+    
     private JDBCUtility jdbcUtility;
     private Connection con;
 
@@ -52,46 +44,40 @@ public class loginServlet extends HttpServlet {
         con = jdbcUtility.jdbcGetConnection();
     }
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-        PrintWriter out = response.getWriter();
+        //HttpSession session = request.getSession();
+        //GET data form 
+        
+        String username = request.getParameter("username");
+        String text = request.getParameter("profileview");
+        Integer cid;
 
-        String user = request.getParameter("username");
-        String pass = request.getParameter("password");
-        String usern = "";
-        String passw = "";
-        String email = "";
-        String name = "";
         try {
-            Statement stmt = con.createStatement();
-            String sql;
-            sql = "SELECT * FROM user where username ='" + user + "' and password ='" + pass + "'";
-            ResultSet rs = stmt.executeQuery(sql);
 
-            while (rs.next()) {
+            String sqlInsert2 = "INSERT INTO userprofile(username,text) VALUES(?,?)";
+            PreparedStatement up = con.prepareStatement(sqlInsert2);
+ 
+            up.setString(1, username);
+            up.setString(2, text);
+            
 
-                usern = rs.getString("username");
-                passw = rs.getString("password");
-                email = rs.getString("email");
-                if (passw.equals(pass) && usern.equals(user)) {
-
-                    HttpSession session = request.getSession(true);
-                    session.setAttribute("username", usern);
-                    response.sendRedirect("index.jsp");
-                    
-                }
-            }
-            // PrintWriter out = response.getWriter();
-            //out.println("Sorry unable to log in ");
-            request.setAttribute("errorMessage", "Invalid user or password");
-            request.getRequestDispatcher("/loginpage.jsp").forward(request, response);
-
-        } catch (Exception e2) {
-
-            e2.printStackTrace();
+            up.executeUpdate();
+        } catch (SQLException ex) {
 
         }
-
+        request.setAttribute("successMessage", "Successfully Update");
+        request.getRequestDispatcher("profile-page.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

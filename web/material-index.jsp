@@ -28,7 +28,7 @@
 
 <!--Nav Body-->
 
-    <div class="main_visual" style="margin-top: 50px;">
+    <div class="main_visual" style="margin-top: 100px;">
         <div class="slide-bottom show">
             <h2>Material</h2>
             <a href="material/1.1.1.jsp" class="button">Strategi Penyelesaian Masalah</a>
