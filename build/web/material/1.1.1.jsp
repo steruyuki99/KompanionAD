@@ -26,10 +26,6 @@
     <body>
 
 
-        <button id="gotopbtn" onclick="goTop()">
-            <i class="material-icons">arrow_upward</i>
-        </button>
-
 
         <!--Header-->
 
@@ -41,6 +37,10 @@
 
 
         <div id="nav-body">
+            
+        <button id="gotopbtn" onclick="goTop()">
+            <i class="material-icons">arrow_upward</i>
+        </button>
 
             <!--end menu div-->
 
