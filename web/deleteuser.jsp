@@ -8,9 +8,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
 <%! String driverName = "com.mysql.jdbc.Driver";%>
-<%!String url = "jdbc:mysql://localhost:3306/webapplicationad";%>
-<%!String user = "root";%>
-<%!String psw = "";%>
+<%!String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/heroku_a8f8953a523fd66?reconnect=true";%>
+<%!String user = "bd548560f46fb3";%>
+<%!String psw = "360fe00c";%>
 <%
 String username = request.getParameter("username");
 

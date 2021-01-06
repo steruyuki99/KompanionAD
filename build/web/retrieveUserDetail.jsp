@@ -11,11 +11,11 @@
 <%@page import="java.sql.Connection"%>
 <%
 String id = request.getParameter("userid");
-String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://localhost:3306/";
-String database = "webapplicationad";
-String userid = "root";
-String password = "";
+<%! String driverName = "com.mysql.jdbc.Driver";%>
+<%!String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/heroku_a8f8953a523fd66?reconnect=true";%>
+<%!String user = "bd548560f46fb3";%>
+<%!String psw = "360fe00c";%>
+<%
 try {
 Class.forName(driver);
 } catch (ClassNotFoundException e) {
