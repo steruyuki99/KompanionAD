@@ -39,7 +39,7 @@ public class loginServlet extends HttpServlet {
         String driver = "com.mysql.jdbc.Driver";
 
         String dbName = "heroku_a8f8953a523fd66";
-        String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/" + dbName + "?reconnect=true";
+        String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/" + dbName + "?autoReconnect=true";
         String userName = "bd548560f46fb3";
         String password = "360fe00c";
 
