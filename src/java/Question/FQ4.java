@@ -97,10 +97,10 @@ public class FQ4 {
         int score = 0;
         
         String driver = "com.mysql.jdbc.Driver";
-        String dbName = "webapplicationad";
-        String url = "jdbc:mysql://localhost/" + dbName + "?";
-        String userName = "root";
-        String password = "";
+        String dbName = "heroku_a8f8953a523fd66";
+        String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/" + dbName + "?reconnect=true";
+        String userName = "bd548560f46fb3";
+        String password = "360fe00c";
         
         jdbcUtility = new JDBCUtility(driver,url,userName,password);
         jdbcUtility.jdbcConnect();
@@ -139,10 +139,10 @@ public class FQ4 {
         ArrayList<Boolean> answerBool = new ArrayList();
         
         String driver = "com.mysql.jdbc.Driver";
-        String dbName = "webapplicationad";
-        String url = "jdbc:mysql://localhost/" + dbName + "?";
-        String userName = "root";
-        String password = "";
+        String dbName = "heroku_a8f8953a523fd66";
+        String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/" + dbName + "?reconnect=true";
+        String userName = "bd548560f46fb3";
+        String password = "360fe00c";
         
         jdbcUtility = new JDBCUtility(driver,url,userName,password);
         jdbcUtility.jdbcConnect();
@@ -169,10 +169,10 @@ public class FQ4 {
     
     public void setAnswerDB(String user, String a1, String a2, String a3){
         String driver = "com.mysql.jdbc.Driver";
-        String dbName = "webapplicationad";
-        String url = "jdbc:mysql://localhost/" + dbName + "?";
-        String userName = "root";
-        String password = "";
+        String dbName = "heroku_a8f8953a523fd66";
+        String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/" + dbName + "?reconnect=true";
+        String userName = "bd548560f46fb3";
+        String password = "360fe00c";
         
         jdbcUtility = new JDBCUtility(driver,url,userName,password);
         jdbcUtility.jdbcConnect();
@@ -198,10 +198,10 @@ public class FQ4 {
     
     public void updateAnswerDB(String user, String a1, String a2, String a3){
         String driver = "com.mysql.jdbc.Driver";
-        String dbName = "webapplicationad";
-        String url = "jdbc:mysql://localhost/" + dbName + "?";
-        String userName = "root";
-        String password = "";
+        String dbName = "heroku_a8f8953a523fd66";
+        String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/" + dbName + "?reconnect=true";
+        String userName = "bd548560f46fb3";
+        String password = "360fe00c";
         
         jdbcUtility = new JDBCUtility(driver,url,userName,password);
         jdbcUtility.jdbcConnect();
