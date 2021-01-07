@@ -192,11 +192,6 @@
 
 </body>
 
-<footer>
-
-    <%@ include file = "footer.jsp" %>
-</footer>
-
 <script>
     $(function () {
         $('a[href^="#"]').click(function () {

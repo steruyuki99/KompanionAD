@@ -80,7 +80,7 @@
                             <br>&nbsp; II &nbsp;&nbsp;Jenis Data
                             <br>&nbsp; III &nbsp;Pemboleh ubah yang bermakna;
                             <br>&nbsp; IV &nbsp;&nbsp;Komen
-                        </a></div>
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -125,7 +125,7 @@
                             <span style="padding-left:2em">}</span><br>
                             }<br><br>
                             Apakah ralat yang terdapat dalam atur cara tersebut ?
-                        </a></div>
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -170,7 +170,7 @@
                             <span style="padding-left:2em">}</span><br>
                             }<br><br>
                             Apakah pembetulan yang betul bagi atur cara tersebut ?
-                        </a></div>
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -210,11 +210,6 @@
     </div>
 
 </body>
-
-<footer>
-
-    <%@ include file = "footer.jsp" %>
-</footer>
 
 <script>
     $(function () {

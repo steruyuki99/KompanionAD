@@ -81,7 +81,7 @@
                             <li class="list_item">
                                 <label class="label--checkbox">
                                     <input type="radio" class="radio" name="jawapan1" value="A">
-                                    A)  null<!--Correct-->
+                                   A)  null<!--Correct-->
                                 </label>
                             </li>
                             <li class="list_item">
@@ -183,11 +183,6 @@
     </div>
 
 </body>
-
-<footer>
-
-    <%@ include file = "footer.jsp" %>
-</footer>
 
 <script>
     $(function () {

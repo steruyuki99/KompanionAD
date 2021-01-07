@@ -106,10 +106,10 @@
                 <div class="pa3 bt b--black-10">
                     <p class="f6 f5-ns lh-copy measure">
                         public static void main(String[ ] args) {<br>
-                        int nom1, nom2, jawapan;<br>
-                        nom1 = 15; nom2 = 40; jawapan = nom1 + nom2;<br>
-                        System.out.println("Hasil campur = " + jawapan );<br><br>
-                        2)Apakah paparan yang dihasilkan apabila program diatas diuji?
+                            int nom1, nom2, jawapan;<br>
+                            nom1 = 15; nom2 = 40; jawapan = nom1 + nom2;<br>
+                            System.out.println("Hasil campur = " + jawapan );<br><br>
+                            2)Apakah paparan yang dihasilkan apabila program diatas diuji?
                     </p>
                     <hr>
                     <p class="f6 f5-ns lh-copy measure">
@@ -129,11 +129,11 @@
                 <div class="pa3 bt b--black-10">
                     <p class="f6 f5-ns lh-copy measure">
                         <br>&nbsp; I &nbsp;&nbsp; Mereka bentuk penyelesaian
-                        <br>&nbsp; II &nbsp;&nbsp;Menganalisis masalah untuk menentukan keperluan
-                        <br>&nbsp; III &nbsp;Menguji dan menyah ralat
-                        <br>&nbsp; IV &nbsp;&nbsp;Melaksanakan penyelesaian
-                        <br>&nbsp; V &nbsp;&nbsp; Mendokumentasi
-                        <br>3)Susun langkah-langkah mencipta sebuah aplikasi di atas
+                            <br>&nbsp; II &nbsp;&nbsp;Menganalisis masalah untuk menentukan keperluan
+                            <br>&nbsp; III &nbsp;Menguji dan menyah ralat
+                            <br>&nbsp; IV &nbsp;&nbsp;Melaksanakan penyelesaian
+                            <br>&nbsp; V &nbsp;&nbsp; Mendokumentasi
+                            <br>3)Susun langkah-langkah mencipta sebuah aplikasi di atas
                     </p>
                     <hr>
                     <p class="f6 f5-ns lh-copy measure">
@@ -150,9 +150,5 @@
         </div>
 
     </body>
-    <footer>
-
-        <%@ include file = "footer.jsp" %>
-    </footer>
 
 </html>

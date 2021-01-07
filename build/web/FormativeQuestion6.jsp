@@ -97,7 +97,7 @@
                             }<br><br>
                             Merujuk atur cara diatas jawab soalan dibawah:<br><br><br><br>
                             1)Apakah elemen pada senaraiNama[2] ?
-                        </a></div>
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -132,7 +132,7 @@
                 <div class="question_card">
                     <div class="question"><a id="q2" class="anchor">
                             2)Apakah elemen pada senaraiUmur[1] ?
-                        </a></div>
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -167,7 +167,7 @@
                 <div class="question_card">
                     <div class="question"><a id="q3" class="anchor">
                             3)Apakah elemen pada senaraiTinggi[3] ?
-                        </a></div>
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -207,11 +207,6 @@
     </div>
 
 </body>
-
-<footer>
-
-    <%@ include file = "footer.jsp" %>
-</footer>
 
 <script>
     $(function () {

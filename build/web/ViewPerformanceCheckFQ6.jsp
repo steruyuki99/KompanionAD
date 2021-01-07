@@ -87,26 +87,26 @@
                 <div class="pa3 bt b--black-10">
                     <p class="f6 f5-ns lh-copy measure">
                         package perisianSaya;<br>
-                        public class MyClass {<br>
-                        <span style="padding-left:2em">public static void main(String[] args){</span><br>
-                        <span style="padding-left:3em">String [] senaraiNama = new String[4];</span><br>
-                        <span style="padding-left:3em">senaraiNama[0] = "Adam";</span><br>
-                        <span style="padding-left:3em">senaraiNama[1] = "Alia";</span><br>
-                        <span style="padding-left:3em">senaraiNama[2] = "Wong";</span><br>
-                        <span style="padding-left:3em">senaraiNama[3] = "Devi";</span><br><br>
-                        <span style="padding-left:3em">int [] senaraiUmur = {16, 17, 16, 17};</span><br><br>
-                        <span style="padding-left:3em">double [] senaraiTinggi = {182.1,172.5,173.2,175.0};</span><br>
-                        <span style="padding-left:3em">System.out.println("NAMA\tUMUR\tTINGGI(cm)");</span><br>
-                        <span style="padding-left:3em">for(int i=0;i<4;i++){</span><br>
-                        <span style="padding-left:5em">System.out.print(senaraiNama[i] + "\t");</span><br>
-                        <span style="padding-left:5em">System.out.print(senaraiUmur[i] + "\t");</span><br>
-                        <span style="padding-left:5em">System.out.print(senaraiTinggi[i]);</span><br>
-                        <span style="padding-left:5em">System.out.println();</span><br>
-                        <span style="padding-left:3em">}</span><br>
-                        <span style="padding-left:2em">}</span><br>
-                        }<br><br>
-                        Merujuk atur cara diatas jawab soalan dibawah:<br><br><br><br>
-                        1)Apakah elemen pada senaraiNama[2] ?
+                            public class MyClass {<br>
+                            <span style="padding-left:2em">public static void main(String[] args){</span><br>
+                            <span style="padding-left:3em">String [] senaraiNama = new String[4];</span><br>
+                            <span style="padding-left:3em">senaraiNama[0] = "Adam";</span><br>
+                            <span style="padding-left:3em">senaraiNama[1] = "Alia";</span><br>
+                            <span style="padding-left:3em">senaraiNama[2] = "Wong";</span><br>
+                            <span style="padding-left:3em">senaraiNama[3] = "Devi";</span><br><br>
+                            <span style="padding-left:3em">int [] senaraiUmur = {16, 17, 16, 17};</span><br><br>
+                            <span style="padding-left:3em">double [] senaraiTinggi = {182.1,172.5,173.2,175.0};</span><br>
+                            <span style="padding-left:3em">System.out.println("NAMA\tUMUR\tTINGGI(cm)");</span><br>
+                            <span style="padding-left:3em">for(int i=0;i<4;i++){</span><br>
+                            <span style="padding-left:5em">System.out.print(senaraiNama[i] + "\t");</span><br>
+                            <span style="padding-left:5em">System.out.print(senaraiUmur[i] + "\t");</span><br>
+                            <span style="padding-left:5em">System.out.print(senaraiTinggi[i]);</span><br>
+                            <span style="padding-left:5em">System.out.println();</span><br>
+                            <span style="padding-left:3em">}</span><br>
+                            <span style="padding-left:2em">}</span><br>
+                            }<br><br>
+                            Merujuk atur cara diatas jawab soalan dibawah:<br><br><br><br>
+                            1)Apakah elemen pada senaraiNama[2] ?
                     </p>
                     <hr>
                     <p class="f6 f5-ns lh-copy measure">
@@ -161,9 +161,5 @@
         </div>
 
     </body>
-    <footer>
-
-        <%@ include file = "footer.jsp" %>
-    </footer>
 
 </html>

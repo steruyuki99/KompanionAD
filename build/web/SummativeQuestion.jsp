@@ -4,29 +4,29 @@
     Author     : dzilh
 --%>
 
-<%@ include file = "header.jsp" %>>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="src/css/question.css" rel="stylesheet">
-    <link href="src/css/material.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="../src/js/script.js"></script>
-    <link rel="stylesheet" type="text/css"
-          href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <title>CodingSchool</title>
-</head>
-<%
-     if(session.getAttribute("username")==null){
-         response.sendRedirect("loginpage.jsp");
-     }
-%>
-<body>
-
+    <%@ include file = "header.jsp" %>>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="src/css/question.css" rel="stylesheet">
+        <link href="src/css/material.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script type="text/javascript" src="../src/js/script.js"></script>
+        <link rel="stylesheet" type="text/css"
+            href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+        <title>CodingSchool</title>
+    </head>
+    <%
+         if(session.getAttribute("username")==null){
+             response.sendRedirect("loginpage.jsp");
+         }
+        %>
+    <body>
+       
     <!--Nav Body-->
 
     <div class="container">
@@ -318,25 +318,20 @@
             </form>
         </main>
     </div>
-
-</body>
-
-<footer>
-
-    <%@ include file = "footer.jsp" %>
-</footer>
-
-<script>
-    $(function () {
-        $('a[href^="#"]').click(function () {
-            var time = 500;
-            var href = $(this).attr("href");
-            var target = $(href === "#" || href === "" ? 'html' : href);
-            var position = target.offset().top;
-            $("html,body").animate({scrollTop: position}, time, "swing");
-            return false;
+        
+    </body>
+    
+    <script>
+        $(function () {
+            $('a[href^="#"]').click(function () {
+                var time = 500;
+                var href = $(this).attr("href");
+                var target = $(href === "#" || href === "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html,body").animate({ scrollTop: position }, time, "swing");
+                return false;
+            });
         });
-    });
-</script>
-
+    </script>
+    
 </html>

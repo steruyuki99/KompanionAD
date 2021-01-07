@@ -116,15 +116,15 @@
         <div class="sidebar">
             <ul>
                 <li><a href="#" class="bt" style="user-select: none;">Formative</a></li>
-                <ul>
-                    <li><a href="ViewPerformanceCheckFQ1.jsp">1. Strategi Penyelesaian Masalah</a></li>
-                    <li><a href="ViewPerformanceCheckFQ2.jsp">2. Algoritma</a></li>
-                    <li><a href="ViewPerformanceCheckFQ3.jsp">3. Pemboleh Ubah, Pemalar dan Jenis Data</a></li>
-                    <li><a href="ViewPerformanceCheckFQ4.jsp">4. Struktur Kawalan</a></li>
-                    <li><a href="ViewPerformanceCheckFQ5.jsp">5. Amalan Terbaik Pengaturcaraan</a></li>
-                    <li><a href="ViewPerformanceCheckFQ6.jsp">6. Struktur Data dan Modular</a></li>
-                    <li><a href="ViewPerformanceCheckFQ7.jsp">7. Pembangunan Aplikasi</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="ViewPerformanceCheckFQ1.jsp">1. Strategi Penyelesaian Masalah</a></li>
+                        <li><a href="ViewPerformanceCheckFQ2.jsp">2. Algoritma</a></li>
+                        <li><a href="ViewPerformanceCheckFQ3.jsp">3. Pemboleh Ubah, Pemalar dan Jenis Data</a></li>
+                        <li><a href="ViewPerformanceCheckFQ4.jsp">4. Struktur Kawalan</a></li>
+                        <li><a href="ViewPerformanceCheckFQ5.jsp">5. Amalan Terbaik Pengaturcaraan</a></li>
+                        <li><a href="ViewPerformanceCheckFQ6.jsp">6. Struktur Data dan Modular</a></li>
+                        <li><a href="ViewPerformanceCheckFQ7.jsp">7. Pembangunan Aplikasi</a></li>
+                    </ul>
                 <li><a href="ViewPerformanceCheckSummative.jsp">Summative</a></li>
             </ul>
         </div>
@@ -208,10 +208,5 @@
         </div>
 
     </body>
-
-    <footer>
-
-        <%@ include file = "footer.jsp" %>
-    </footer>
 
 </html>

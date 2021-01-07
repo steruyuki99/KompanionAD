@@ -76,7 +76,7 @@
                 <div class="question_card">
                     <div class="question"><a id="q1" class="anchor">
                             1) Yang manakah <b>bukan</b> fasa yang terdapat dalam SDLC ?
-                        </a></div>
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -116,7 +116,7 @@
                             nom1 = 15; nom2 = 40; jawapan = nom1 + nom2;<br>
                             System.out.println("Hasil campur = " + jawapan );<br><br>
                             2)Apakah paparan yang dihasilkan apabila program diatas diuji?
-                        </a></div>
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -156,7 +156,7 @@
                             <br>&nbsp; IV &nbsp;&nbsp;Melaksanakan penyelesaian
                             <br>&nbsp; V &nbsp;&nbsp; Mendokumentasi
                             <br>3)Susun langkah-langkah mencipta sebuah aplikasi di atas
-                        </a></div>
+                    </a></div>
 
                     <div class="answer">
                         <ul class="ansList">
@@ -196,11 +196,6 @@
     </div>
 
 </body>
-
-<footer>
-
-    <%@ include file = "footer.jsp" %>
-</footer>
 
 <script>
     $(function () {
