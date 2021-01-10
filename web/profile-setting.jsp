@@ -15,7 +15,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
     <%
          if(session.getAttribute("username")==null){
              response.sendRedirect("loginpage.jsp");
@@ -107,12 +106,12 @@
                                   <h3>Edit Profile</h3>
                                   <form method="post" id="usrprofile" action="profileupdate.jsp">
                                       <div class="col-lg-4">
-                                        <label for="profil">About me: </label>
+                                          <label for="profil">About me: </label><br>    
                                         <input type="hidden" name="username" value="${username}">  
                                         <textarea rows="4" cols="50" name="personal" form="usrprofile">Ceritakan tentang diri anda.
                                         
                                         </textarea><br>
-                                        <input class="btn btn-success" type="submit" value="Submit">
+                                        <input class="btn btn-success" type="submit" onclick="return confirm('Are you sure you want to save changes?');"value="Submit">
                                         </div>
                                   </form>
                               </div>
@@ -136,7 +135,7 @@
                                               <label for="password">Re-enter Password : </label><input class="form-control" type="text" id="confirm_password" name="repassword" placeholder="Re-enter Password" onkeyup='check();'>
                                               <span id='message'></span><br><br><br>
                                           </div>
-                                          <input class="btn btn-success" type="submit" value="Save">
+                                          <input class="btn btn-success" type="submit" onclick="return confirm('Are you sure you want to save changes?');" value="Save">
                                       </div>
                                   </form>
                               </div>
@@ -149,7 +148,7 @@
                         <h3>Delete Account</h3>
                         <form action="deleteuser.jsp"  ><div class="col-lg-4">
                                  <input type="hidden" name="username" value="${username}">
-                                 <br><input class="btn btn-success" type="submit" value="Delete">    
+                                 <br><input class="btn btn-success" type="submit" onclick="return confirm('Are you sure you want to delete this account?');" value="Delete">    
                             </div>
                         </form>
                     </div>

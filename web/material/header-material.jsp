@@ -27,7 +27,7 @@
     <div class="header">
         <a href="../index.jsp"><img src="../src/img/cd2.png" width="132" height="31"></a>
         <div class="header-right">
-            <a href="../material_index.jsp">View Material</a>
+            <a href="../material/material_index.jsp">View Material</a>
             <a href="../SummativeQuestion.jsp">Summative</a>
             <a href="../FormativeMenu.jsp">Formative</a>
             <a href="../View-Performance.jsp">View Performance</a>

@@ -67,7 +67,7 @@ public class userRegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        String personal = "Hello new user";
+        String personal = "Hello "+username+", We're so glad you decided to try out CodingSchool. If you've want to learn something new, we bet you'll find our website a fresh, calm and orderly alternative. Learning doesn't have to be hard.";
 
         try {
 

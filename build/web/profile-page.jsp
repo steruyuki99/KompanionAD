@@ -46,7 +46,7 @@
         <div class="sideblock">
             <div class="sidetab">
                 <div id="AboutMe" class="tabcontent">
-                    <h3>Account Settings
+                    <h3>Account Detail
                     </h3>
                     <jsp:include page="retrieveUserDetail.jsp"/>
                 </div>
