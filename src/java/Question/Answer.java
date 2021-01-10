@@ -170,6 +170,9 @@ public class Answer {
             }
             
             
+            if(rs == null){
+                return 10;
+            }
             if(this.answer1.equals("A")){
                 score++;
             }

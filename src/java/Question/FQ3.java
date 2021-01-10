@@ -115,6 +115,9 @@ public class FQ3 {
                 this.answer3 = rs.getString("ans3");
             }
             
+            if(rs == null){
+                return 5;
+            }
             if(this.answer1.equals("A")){
                 score++;
             }
