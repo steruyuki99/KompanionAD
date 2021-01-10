@@ -11,11 +11,11 @@
 <%@page import="java.sql.Connection"%>
 <%
 String id = request.getParameter("userid");
-<%! String driverName = "com.mysql.jdbc.Driver";%>
-<%!String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/heroku_a8f8953a523fd66?reconnect=true";%>
-<%!String user = "bd548560f46fb3";%>
-<%!String psw = "360fe00c";%>
-<%
+        String dbName = "heroku_a8f8953a523fd66";
+        String url = "jdbc:mysql://us-cdbr-east-02.cleardb.com/" + dbName + "?reconnect=true";
+        String userid = "bd548560f46fb3";
+        String password = "360fe00c";
+        String driver = "com.mysql.jdbc.Driver";
 try {
 Class.forName(driver);
 } catch (ClassNotFoundException e) {
@@ -32,8 +32,7 @@ ResultSet resultSet = null;
 try{
 String username=(String)session.getAttribute("username");
 
-
-connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+connection = DriverManager.getConnection(url, userid, password);
 statement=connection.createStatement();
 String sql ="SELECT username,email FROM user WHERE username = '"+username+"'";
 resultSet = statement.executeQuery(sql);
@@ -45,8 +44,7 @@ if(resultSet.next()){
 <P>Email :
 <%=resultSet.getString("email") %></P>
 
-<%
-}
+<%}
 connection.close();
 } catch (Exception e) {
 e.printStackTrace();
