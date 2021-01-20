@@ -16,35 +16,11 @@
 <%
      if(session.getAttribute("username")==null){
          response.sendRedirect("loginpage.jsp");
-     }//else{
-//        String driver = "com.mysql.jdbc.Driver";
-
-        //String dbName = "webapplicationad";
-        //String url = "jdbc:mysql://localhost/" + dbName + "?";
-       // String userName = "root";
-       // String password = "";
-
-      //  jdbcUtility = new JDBCUtility(driver,
-    //            url,
-  //              userName,
-//                password);
-
-        //jdbcUtility.jdbcConnect();
-       // con = jdbcUtility.jdbcGetConnection();
-        
-       // String username = (String) session.getAttribute("username");
-        
-       // try ( /* TODO output your page here. You may use following sample code. */
-     //       Statement stmt = con.createStatement()) {
-   //         String sqlFind = "SELECT * FROM summative WHERE username='" + username + "'";
- //           ResultSet rs = stmt.executeQuery(sqlFind);
-            
-//            if(rs.next()){
-//                break;
-//            }else{
-//                response.sendRedirect("FormativeMenu.jsp");
-//            }
-//        }
+     }
+     
+     if(){
+         
+     }
      
     String username=(String)session.getAttribute("username");
     
